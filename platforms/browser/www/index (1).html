@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<title>iMotopeças</title>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/mask.js"></script>
+<script type="text/javascript">
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady(){
+    document.addEventListener("backbutton", onBackKeyDown, false);
+    iniciaApp();
+}
+    
+function onBackKeyDown() { if(device.platform=="iOS"){
+        //history.go(-1);
+    } else if(device.platform=="Android") {
+        //navigator.app.backHistory();
+    }
+}
+
+function iniciaApp(){
+    //alert('inicia app');
+    if(window.localStorage.getItem("imotoCateg").length==0){
+        loadCategories();
+    } else {
+        startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
+    }
+}
+
+function loadCategories(){
+    showAppMsg('Carregando App');
+    var urlServer = "http://" + strServer + "/categories.php";
+    $.getJSON(urlServer, function(result){
+        window.setTimeout(function() {
+            hideAppMsg();
+            window.localStorage.setItem("imotoCateg", JSON.stringify(result));
+            startMenu(result);
+        }, 500);
+    }).error(function(err) {
+        hideAppMsg();
+        alert("Não foi possível realizar a conexão com o Banco de Dados: " + err);
+        //navigator.notification.alert("Não foi possível realizar a conexão com o Banco de Dados: " + err, alertDismissed, '', 'Ok');
+    }).done(function() {
+        //
+    });
+}
+
+function startMenu(objCateg){
+    //navigator.notification.alert(objCateg.length, alertDismissed, '', 'Ok');
+    alert(objCateg.length);
+    $.each(objCateg, function(i, dados){
+        //
+    });
+}
+
+</script>
+<style type="text/css">
+html {
+    /*background: url('./img/backgroundXS.png');*/
+    background-position: fixed;
+    background-repeat: repeat-y;
+    background-size:  100% auto;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+}
+
+body {
+    padding-top: 120px !important;
+}
+</style>
+</head>
+<body class="panel panel-transparent">
+<nav class="navbar navbar-light fixed-top navbar-default bg-light" >
+    <div class="navbar-brand">
+        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>-->
+        <img src="./glyphicons/glyphicons-517-menu-hamburger.png" width="30" height="20" class="d-inline-block align-center" alt="" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="./img/Logo.png" width="123" height="30" class="d-inline-block align-center" alt="">
+    </div>
+</nav>
+<div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+        <h5 class="text-white h4">Categorias</h5>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+</div>
+<div class="input-group mb-3 search-box">
+    <input type="text" id="txPesquisa" class="form-control" placeholder="Pesquise..." aria-label="Filtrar" aria-describedby="btPesquisa" onkeyup="searchCli();">
+    <div class="input-group-append">
+        <span class="input-group-text glyphicon glyphicon-search" aria-hidden="true">
+                <img src="./glyphicons/glyphicons-28-search.png" width="20" height="20" alt="">
+        </span>
+    </div>
+</div>
+<div class="container-fluid panel-body">
+    <div class="list-group" id="tbProd">
+    </div>
+</div>
+</body>
+</html>

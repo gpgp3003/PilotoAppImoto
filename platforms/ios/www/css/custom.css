@@ -1,0 +1,268 @@
+body{ 
+  
+	background-color: #FFFFFF;
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+
+.navbar-default { border-bottom: 5px solid #000000 !important;  }
+
+.panel-transparent{
+    background: none;
+}
+
+.panel-transparent .panel-body{
+    background: rgba(245, 245, 245, 0) !important;
+}
+
+.panel-transparent .panel-bdmd{
+    background: rgba(245, 245, 245, 0.6) !important;
+}
+
+.search-box {
+	position: fixed;
+	top: 80px;
+	padding-right: 15px;
+	padding-left: 15px;
+	z-index: 99999;
+}
+
+.titulo-pag {
+	position: fixed;
+	top: 130px;
+	right: 15px;
+	left: 15px;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	vertical-align: middle;
+	z-index: 99999;
+}
+
+#ActivityIndicator{
+	position: fixed;
+	z-index: 9999999;
+	display: block;
+	text-align: center; 
+    bottom: 0px;
+	top: 0px;
+    left: 0px;
+    right: 0px;
+	width: 100%;
+    height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: 100% 100%;
+	background-color:rgba(0, 0, 0, 0.8);
+}
+
+#CategoriesMenu{
+	position: fixed;
+	z-index: 9999998;
+	display: none;
+    bottom: 0px;
+	top: 65px;
+    left: 0px;
+    right: 0px;
+	width: 100%;
+	height: auto;
+	overflow-y: scroll;
+}
+
+.button-menu{
+	vertical-align: middle;
+}
+
+.item-menu{
+	width: 100%;
+}
+
+.boxshadow{
+	box-shadow: 0 0 25px rgb(200, 200, 200);
+}
+
+.card-img-left {
+	float: left;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.vertical-center
+{
+ display: table-cell;
+ float: none;
+ vertical-align: middle;
+}
+
+#spinner{
+	display: block;
+    position: fixed;
+	top: auto;
+    bottom: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+	z-index: 10000000;
+    -webkit-animation: aviao 5s infinite;
+    animation: aviao 5s infinite;
+}
+
+#backimg{
+	display: block;
+    position: fixed;
+	top: auto;
+    bottom: 20px;
+    right: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+	z-index: 9999997;
+}
+
+#appMsg{
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 24pt;
+	margin-top: auto;
+	margin-bottom: 20px;
+}
+
+#dvAppMsg{
+	height: auto;
+	width: 100%;
+	top: auto;
+	bottom: 60px;
+	left: 0;
+	right: 0;
+	position: absolute;
+}
+
+@-webkit-keyframes aviao {
+    0% { left:0%; }
+    50% { left:50%; }
+    100% { left:100%; }
+}
+
+.notify-badge{
+    position: absolute;
+    left:0px;
+    bottom:20px;
+    background-color:rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color:white;
+    padding:5px 10px;
+    font-size:24px;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:  url('fonts/icomoon.eot?nyb2r2');
+	src:  url('fonts/icomoon.eot?nyb2r2#iefix') format('embedded-opentype'),
+	  url('fonts/icomoon.ttf?nyb2r2') format('truetype'),
+	  url('fonts/icomoon.woff?nyb2r2') format('woff'),
+	  url('fonts/icomoon.svg?nyb2r2#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	display: inline-block;
+  
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+  .icon-dialogue-bubble:before {
+	content: "\e911";
+  }
+  .icon-categories:before {
+	content: "\e910";
+  }
+  .icon-cityscape:before {
+	content: "\e900";
+  }
+  .icon-heart:before {
+	content: "\e901";
+  }
+  .icon-help:before {
+	content: "\e902";
+  }
+  .icon-lines-menu:before {
+	content: "\e903";
+  }
+  .icon-magnifying-glass:before {
+	content: "\e904";
+  }
+  .icon-newsletter:before {
+	content: "\e905";
+  }
+  .icon-facebook:before {
+	content: "\e906";
+  }
+  .icon-google-plus:before {
+	content: "\e907";
+  }
+  .icon-instagram:before {
+	content: "\e908";
+  }
+  .icon-motorcycle:before {
+	content: "\e909";
+  }
+  .icon-star:before {
+	content: "\e90a";
+  }
+  .icon-twitter:before {
+	content: "\e90b";
+  }
+  .icon-youtube:before {
+	content: "\e90c";
+  }
+  .icon-shopping-cart:before {
+	content: "\e90d";
+  }
+  .icon-user:before {
+	content: "\e90e";
+  }
+  .icon-wallet:before {
+	content: "\e90f";
+  }
+
+  footer .imotopecas-info {
+	color: #000;
+	margin: 40px 0 40px 0;
+	font-size: 12px;
+  }
+  footer .imotopecas-info.mobile-only {
+	margin: 10px 0;
+  }
+  footer .credits {
+	background-color: #fb1922;
+	color: #fff;
+	padding: 20px 0 15px 0;
+	font-size: 10px;
+  }
+  footer .credits .content {
+	text-align: center;
+  }
+  footer .credits .prime {
+	text-align: center;
+  }
+  footer .credits .prime img {
+	height: 24px;
+	margin-top: -4px;
+  }
+
+  h5 hr {
+	margin: 7px 0 !important;
+	border: solid 2px #fb1922;
+	width: 50px;
+	border-radius: 2px;
+  }
