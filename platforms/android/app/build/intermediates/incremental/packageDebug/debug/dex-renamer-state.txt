@@ -1,4 +1,4 @@
-#Mon Oct 15 17:51:51 BRT 2018
-base.0=/Users/fabioohtsuki/Google Drive/Development/Cordova/iMotoPecas/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Wed Oct 24 15:24:50 BRST 2018
+base.0=E\:\\imotopecas\\app-imotopecas-cordova\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
-file.0=/Users/fabioohtsuki/Google Drive/Development/Cordova/iMotoPecas/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex
+file.0=E\:\\imotopecas\\app-imotopecas-cordova\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
