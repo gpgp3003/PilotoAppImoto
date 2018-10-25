@@ -52,10 +52,9 @@ body {
         <img src="./img/Logo.png" width="123" height="30" class="d-inline-block align-center" alt="">
     </div>
 </nav>
-<div class="bg-dark" id="CategoriesMenu">
-    <div class="list-group list-group-flush bg-dark" id="menuInicio">
-        <h5 class="text-white m-3 h4">Todos os departamentos</h5>
-        <!--<span class="text-muted">Toggleable via the navbar brand.</span>-->
+<div class="bg-light" id="CategoriesMenu">
+    <div class="list-group list-group-flush bg-light" id="menuInicio">
+        <h5 class="text-dark m-3 h4">Todos os departamentos<hr></h5>
     </div>
 </div>
 <div class="input-group mb-3 search-box">
@@ -125,27 +124,27 @@ body {
 
     <a class="card mt-3 boxshadow border-0" href="./category.html?tipo=1&idCtg=31">
         <span class="notify-badge">Vestuário</span>
-        <img class="img-fluid" src="./img/category1.jpg" alt="">
+        <img class="card-img" src="./img/category1.jpg" alt="">
     </a>
     <a class="card mt-3 boxshadow border-0" href="./category.html?tipo=1&idCtg=5">
         <span class="notify-badge">Capacetes</span>
-        <img class="img-fluid" src="./img/category2.png" alt="">
+        <img class="card-img" src="./img/category2.png" alt="">
     </a>
     <a class="card mt-3 boxshadow border-0" href="./category.html?tipo=1&idCtg=300">
         <span class="notify-badge">Motopeças</span>
-        <img class="img-fluid" src="./img/category3.png" alt="">
+        <img class="card-img" src="./img/category3.png" alt="">
     </a>
     <a class="card mt-3 boxshadow border-0" href="./category.html?tipo=1&idCtg=265">
         <span class="notify-badge">Pneus</span>
-        <img class="img-fluid" src="./img/category4.png" alt="">
+        <img class="card-img" src="./img/category4.png" alt="">
     </a>
     <a class="card mt-3 boxshadow border-0" href="./category.html?tipo=1&idCtg=7">
         <span class="notify-badge">Acessórios</span>
-        <img class="img-fluid" src="./img/category5.png" alt="">
+        <img class="card-img" src="./img/category5.png" alt="">
     </a>
     <a class="card mt-3 boxshadow border-0" href="./category.html?tipo=1&idCtg=290">
         <span class="notify-badge">Off-Road</span>
-        <img class="img-fluid" src="./img/category6.png" alt="">
+        <img class="card-img" src="./img/category6.png" alt="" height="auto">
     </a>
     <!--<a class="card mt-3 boxshadow border-0" href="./category.html?tipo=1&idCtg=">
         <img class="img-fluid" src="./img/category7.png" alt="">
@@ -165,11 +164,70 @@ body {
     <div class="credits">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-xs-12">
                     <div class="content">
                         <strong>IMOTOPEÇAS</strong> TODOS OS DIREITOS RESERVADOS
                     </div>
-                    <div class="prime"><br>DESENVOLVIMENTO:&nbsp;<img src="./img/prime.png" alt="">
+                    <div class="prime">
+
+                        <br>DESENVOLVIMENTO:&nbsp;<img src="./img/prime.png" alt="">
+
+                        <hr style="background-color: white">
+
+                        <!--FORMAS DE PAGAMENTO-->
+                        <div class="col-md-12">
+                                <strong>FORMAS DE PAGAMENTO</strong><br>
+                                
+                                Cartão de crédito<br>
+                                <img src="img/forma-pagamento/visa.png" alt="">
+                                <img src="img/forma-pagamento/mastercard.png" alt="">
+                                <img src="img/forma-pagamento/elo.png" alt="">
+                                <img src="img/forma-pagamento/dinners.png" alt="">
+                                <img src="img/forma-pagamento/american_express.png" alt="">
+                                <img src="img/forma-pagamento/hipercard.png" alt="">    
+                                <br>
+                                
+                                Débito em conta<br>
+                                <img src="img/forma-pagamento/itau.png">
+                                <img src="img/forma-pagamento/boleto.png">
+                                <br>
+                        </div>
+
+                        <!--REDES SOCIAIS-->
+                        <script>
+                                function abreFacebook(){
+                                    var scheme;
+                                    if(device.platform==='IOS'){
+                                        scheme = 'fb://';
+                                    }else if(device.platform==='Android'){
+                                        scheme = 'com.facebook.katana';
+                                    }
+                                    
+                                    
+                                    //appAvailability.check(scheme,
+                                             // InAppBrowser.open('https://facebook.com/ImotopecasMarketplace?'+scheme, '_system','location=yes'),
+                                                cordova.InAppBrowser.open('https://facebook.com/ImotopecasMarketplace?'+scheme, '_system','location=yes')
+                                      //              );
+
+                                    
+                                    /*
+                                    if(cordova.appAvailability.check(scheme,function(){return true;},function(){return false;})){
+                                        cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace','_system','location=yes');
+                                    }else{*/
+                                        
+                                /*    }*/
+                                }
+                        </script>
+                        <div class="col-md-3 social">
+                                <h5>SIGA NOSSAS REDES SOCIAIS</h5>
+                                <ul class="list-display">
+                                  <li><a onclick="abreFacebook()">facebook</a></li>
+                                  <li><a onclick="cordova.InAppBrowser.open('https://www.instagram.com/imotopecas/','_system','location=yes')">instagram</a></li>
+                                  <li><a onclick="cordova.InAppBrowser.open('https://www.twitter.com/imotopecas_/','_system','location=yes')"  class="twitter">twitter</a></li>
+                                  <li><a onclick="cordova.InAppBrowser.open('https://www.youtube.com/channel/UCa10bkhJsv-qb6PFDEVUqhA','_system','location=yes')">youtube</a></li>
+                                  <li><a onclick="cordova.InAppBrowser.open('https://plus.google.com/+ImotopecasMarketplace','_system','location=yes')">googleplus</a></li>
+                                </ul>                        
+                        </div>
                     </div>
                 </div>
             </div>
