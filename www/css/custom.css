@@ -30,7 +30,7 @@ body{
 
 .titulo-pag {
 	position: fixed;
-	top: 130px;
+	top: 80px;
 	right: 15px;
 	left: 15px;
 	padding-right: 15px;
@@ -46,12 +46,12 @@ body{
 	z-index: 9999999;
 	display: block;
 	text-align: center; 
-  bottom: 0px;
+	bottom: 0px;
 	top: 0px;
-  left: 0px;
-  right: 0px;
+	left: 0px;
+	right: 0px;
 	width: 100%;
-  height: 100%;
+	height: 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
@@ -91,9 +91,9 @@ body{
 }
 
 .vertical-center{
- display: table-cell;
- float: none;
- vertical-align: middle;
+	display: table-cell;
+	float: none;
+	vertical-align: middle;
 }
 
 #spinner{
@@ -110,12 +110,12 @@ body{
 
 #backimg{
 	display: block;
-  position: fixed;
+	position: fixed;
 	top: auto;
-  bottom: 20px;
-  right: 20px;
-  margin-top: auto;
-  margin-bottom: auto;
+	bottom: 20px;
+	right: 20px;
+	margin-top: auto;
+	margin-bottom: auto;
 	z-index: 9999997;
 }
 

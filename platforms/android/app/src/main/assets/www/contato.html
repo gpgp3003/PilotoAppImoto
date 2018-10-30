@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <title>iMotopeças</title>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mask.js"></script>
+
+    <script type="text/javascript" src="js/jquery-validate.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            document.addEventListener("backbutton", onBackKeyDown, false);
+            iniciaApp();
+        }
+
+        function onBackKeyDown() {
+            if (device.platform == "iOS") {
+                //history.go(-1);
+            } else if (device.platform == "Android") {
+                //navigator.app.backHistory();
+            }
+        }
+
+    </script>
+    <style type="text/css">
+        html {
+            /*background: url('./img/backgroundXS.png');*/
+            background-position: fixed;
+            background-repeat: repeat-y;
+            background-size: 100% auto;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+        }
+
+        body {
+            font-family: "Nunito", Arial, sans-serif;
+
+        }
+
+        #icones_contato{
+        margin-right: 8px;
+}
+.form-group small.important {
+    color: #fb1922;
+    font-size: 13px;
+}
+
+a,a:hover {
+    color: #fb1922;
+}
+
+
+.imp-primary,
+.imp-primary:active,
+.imp-primary:hover,
+.imp-primary:focus {
+    border-radius: 10px;
+    background-color: #fb1922;
+    color: white;
+}
+.imp-primary:hover {
+    font-weight: bold;
+}
+
+#bt_at{
+    border-radius: 10px;
+}
+.error{
+    color: red;
+    font-size: 70%;
+}
+
+    </style>
+</head>
+
+<body class="panel panel-transparent bg-light">
+  <br>
+                <!-- form -->
+                <div class="imoto-content">
+
+                    <div class="container">
+                
+                
+                        <div class="page-content container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h5 class="inner-page-title">Fale Conosco
+                                        <hr>
+                                    </h5>
+                                    <div class="imp-container imp-clean-container ">
+                                
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div id="messages_product_view"></div>
+                                                <!-- <form action="https://dev.imotopecas.com.br/contacts/index/post/" method="post" class="contact-form"> -->
+                                                <form  method="post" class="contact-form">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="name">Nome<small class="important"> *</small></label>
+                                                                <input type="text" class="form-control border-input" name="name" id="name"
+                                                                    placeholder="" title="Nome" value="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="email">O email<small class="important"> *</small></label>
+                                                                <input type="email" class="form-control border-input" name="email" id="email"
+                                                                    title="O email" value="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="telephone">Telefone<small class="important"> *</small></label>
+                                                                <input type="telephone" class="form-control border-input mask-phone"
+                                                                    name="telephone" id="telephone" title="Telefone" maxlength="15">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="comment">Comentários<small class="important"> *</small></label>
+                                                                <textarea name="comment" id="comment" class="form-control border-input"
+                                                                    rows="8" cols="80" title="Comentários"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <button type="submit" name="button" class="btn imp-primary btn-block">Enviar</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                                <br>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="contact-details">
+                                                   
+                                                    
+                                                    <p> <img id="icones_contato" src="./glyphicons/glyphicons-55-clock.png" width="25" height="25">De segunda a sexta das 09:00 às 18:00.</p>
+                                                    
+                                                </div>
+                                                <div class="contact-details">
+                                                    
+ 
+                                                    
+                                                    
+                                                    <p><img id="icones_contato" src="./glyphicons/glyphicons-246-chat.png" width="25" height="20"><a href="#">primeinovacao@gmail.com</a> </p></div>
+                                                <div class="contact-details">
+
+
+                                                    <p><img id="icones_contato" src="./glyphicons/glyphicons-11-envelope.png" width="25" height="18">
+                                                        <a href="https://tawk.to/chat/5a9d34f74b401e45400d690f/default/?$_tawk_popout=true"
+                                                            target="_blank" >
+                                                        <button id="bt_at" class="btn btn-dark btn-sm">
+                                                    Atendimento on-line</button></a>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- fim form -->
+               
+                <a href="index.html"><img src="./glyphicons/glyphicons-217-circle-arrow-left.png" id="backimg"  width="30px" height="30px"></a>
+       
+</body>
+<script>
+    $('#txPesquisa').keypress(function (event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            searchProd();
+        }
+    });
+
+
+    $().ready(function(){
+    $('.contact-form').validate({
+        rules : {
+            name:{
+                required:true,
+                minlength:3
+            },
+            last_name:{
+                required:true,
+                minlength:3
+            },
+            email:{
+                required:true,
+                email:true
+            },
+            telephone: {
+                required:true,
+                
+            },
+            comment:{
+                required:true,
+                minlength:5
+            }
+        },
+        messages:{
+            name:{
+                required:"Por favor, informe seu nome",
+                minlength:"O nome deve ter pelo menos 3 caracteres"
+            },
+            last_name:{
+                required:"Por favor, informe seu sobrenome",
+                minlength:"O nome deve ter pelo menos 3 caracteres"
+            },
+            email:{
+                required:"É necessário informar um email",
+                email:"Informe um e-mail válido"
+            },
+            telephone:{
+                required:"É necessário informar um telefone"
+            },
+            comment:{
+                required:"A mensagem não pode ficar em branco",
+                minlength:"A mensagem deve ter pelo menos 3 caracteres"
+            }
+        }
+    })
+});
+
+
+</script>
+
+</html> 

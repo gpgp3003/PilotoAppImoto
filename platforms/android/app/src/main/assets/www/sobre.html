@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <title>iMotopeças</title>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mask.js"></script>
+
+
+    <!-- collapse imoto -->
+    <!-- 
+    <link rel="stylesheet" type="text/css" href="https://dev.imotopecas.com.br/skin/frontend/imotopecas/default/css/style.css" media="all" /> -->
+
+
+    <!-- collapse imoto -->
+
+
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            document.addEventListener("backbutton", onBackKeyDown, false);
+            iniciaApp();
+        }
+
+        function onBackKeyDown() {
+            if (device.platform == "iOS") {
+                //history.go(-1);
+            } else if (device.platform == "Android") {
+                //navigator.app.backHistory();
+            }
+        }
+
+    </script>
+    <style type="text/css">
+        html {
+            /*background: url('./img/backgroundXS.png');*/
+            background-position: fixed;
+            background-repeat: repeat-y;
+            background-size: 100% auto;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+        }
+
+        body{
+            padding-bottom: 0px !important;
+        }
+
+        .imp-container {
+
+            padding-bottom: none;
+            border-radius: 10px;
+            background-color: #ffffff;
+
+
+        }
+
+
+
+        .row {
+            margin: 2px;
+        }
+
+
+        .imp-collapse a {
+            border-radius: 10px 10px 0 0;
+            padding: 10px 20px;
+            background-color: #202020;
+            font-weight: bold;
+            width: 100%;
+            color: #fff;
+            display: block;
+
+        }
+
+        .imp-collapse a.collapsed {
+            background-color: #eaeaea;
+            color: #000;
+            border-radius: 10px;
+        }
+
+        .question {
+            margin: 5px;
+        }
+
+        .card {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+
+        }
+
+
+
+        p {
+            margin-top: 1%;
+            margin-left: 1%;
+            text-align: justify;
+        }
+
+        h5 {
+            margin-top: 1%;
+            margin-left: 1%;
+            font-weight: bold;
+        }
+
+        h6{
+            font-weight: bold;
+            margin-top: 1%;
+            margin-left: 1%;
+        }
+
+        h6:hover{
+            text-decoration:underline;
+            
+        }
+
+        a,h6,h5,p{
+            font-size: 70%;
+        }
+
+        #h5{
+            font-size: 100%;
+        }
+    </style>
+</head>
+
+<body class="panel panel-transparent bg-light">
+<br>
+    <!--<div class="container">-->
+    <h5 id="h5" class="inner-page-title">Sobre <hr>
+    </h5>
+
+    <div class="row">
+            <div class="col-md-12">
+                <div class="card card-collapse" id="card-collapse">
+                    <div class="question">
+                        <div class="imp-collapse">
+                                <a data-toggle="collapse" href="#collapse-z" role="button" aria-expanded="false" aria-controls="collapse-z" class="collapsed">
+                                    Sobre o Imotopeças
+                            </a>
+                        </div>
+                        <div class="collapse imp-collapse-body" id="collapse-z" data-parent="#card-collapse">
+                                <h5>Sobre nós</h5>
+                                    <p>O Imotopeças é o marketplace pioneiro de vendas de motopeças, duas rodas,
+                                        acessórios e serviços</p>
+                                    <h5>Visão</h5>
+                                    <p>"Ser o maior Marketplace especializado do segmento".</p>
+                                    <h5>Missão</h5>
+                                    <p>Ser um elo colaborativo entre vendedores e compradores do segmento de motopeças,
+                                        duas rodas, acessórios e vestuário</p>
+                                    <h5>Objetivo</h5>
+                                    <p>O objetivo do Imotopeças é beneficiar seus usuários com um portal simples,
+                                        transparecendo confiança necessária para a publicação de ofertas claras e
+                                        honestas.</p>
+                                    <p>Anúncios que não cumprem as regras do Termo de Uso não serão permitidos.
+                                        Agradecemos sempre a colaboração dos nossos visitantes e parceiros para
+                                        disponibilizar um serviço cada vez melhor.</p>
+                                    <h5>Qualidade</h5>
+                                    <p>Nós, da equipe Imotopeças, sempre procuramos oferecer a melhor qualidade e a
+                                        maior facilidade para nossos clientes.</p>
+                                    <p>Nosso objetivo consiste em dara a mais rápida e simples solução possível aos
+                                        anunciantes, utilizando o que há de mais moderno e atual em termos de
+                                        tecnologia. As páginas do nosso site são validadas pelos padrões internacionais
+                                        de Internet.</p>
+
+
+                                        <h5>CNPJ</h5>
+                                        <p>28.967.299/0001-77</p>
+
+                                        <h5>Endereço</h5>
+                                        <p>ALAMEDA TOCANTINS, 75</p>
+                                          <p>  2º ANDAR – SALA 210</p>
+                                          <p>ALPHAVILLE, BARUERI, SP, CEP 06455-020</p>
+
+                                        
+                        </div>
+                    </div>
+                
+
+
+                    <div class="question">
+                        <div class="imp-collapse">
+                            <a data-toggle="collapse" href="#collapse-questions" role="button" aria-expanded="false" aria-controls="collapse-questions" class="collapsed">
+                                    Política de Privacidade
+                            </a>
+                        </div>
+                        <div class="collapse imp-collapse-body" id="collapse-questions" data-parent="#card-collapse">
+                                   <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                        aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                        beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                                        of them accusamus labore sustainable VHS.</p>   </div>
+                    </div>
+
+
+
+                    <div class="question">
+                            <div class="imp-collapse">
+                                <a data-toggle="collapse" href="#collapse-a" role="button" aria-expanded="false" aria-controls="collapse-a" class="collapsed">
+                                        Política de Compra
+                                </a>
+                            </div>
+                            <div class="collapse imp-collapse-body" id="collapse-a" data-parent="#card-collapse">
+                                       <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                            brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                            aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                            beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                                            of them accusamus labore sustainable VHS.</p>   </div>
+                        </div>
+
+
+                        <div class="question">
+                                <div class="imp-collapse">
+                                    <a data-toggle="collapse" href="#collapse-d" role="button" aria-expanded="false" aria-controls="collapse-d" class="collapsed">
+                                            Política de entrega, troca e devolução
+                                    </a>
+                                </div>
+                                <div class="collapse imp-collapse-body" id="collapse-d" data-parent="#card-collapse">
+                                           <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                                richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                                brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                                aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                                Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                                                of them accusamus labore sustainable VHS.</p>   </div>
+                            </div>
+
+
+                            <div class="question">
+                                    <div class="imp-collapse">
+                                        <a data-toggle="collapse" href="#collapse-e" role="button" aria-expanded="false" aria-controls="collapse-e" class="collapsed">
+                                                Termos e condições de uso do marketplace
+                                        </a>
+                                    </div>
+                                    <div class="collapse imp-collapse-body" id="collapse-e" data-parent="#card-collapse">
+                                               <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                                    beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                                                    of them accusamus labore sustainable VHS.</p>   </div>
+                                </div>
+
+
+
+                                <div class="question">
+                                        <div class="imp-collapse">
+                                            <a data-toggle="collapse" href="#collapse-f" role="button" aria-expanded="false" aria-controls="collapse-f" class="collapsed">
+                                                    Termos e condições gerais de uso do site
+                                            </a>
+                                        </div>
+                                        <div class="collapse imp-collapse-body" id="collapse-f" data-parent="#card-collapse">
+                                                   <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                                        aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                                        beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                                                        of them accusamus labore sustainable VHS.</p>   </div>
+                                    </div>
+
+                                    
+
+                        <div class="question">
+                                <div class="imp-collapse">
+                                    <a data-toggle="collapse" href="#collapse-b" role="button" aria-expanded="false" aria-controls="collapse-b" class="collapsed">
+                                            Perguntas frequentes
+                                    </a>
+                                </div>
+
+
+                                <div class="collapse imp-collapse-body" id="collapse-b" data-parent="#card-collapse">
+
+                                        <h6 data-toggle="collapse" data-target="#demo1">Simple collapsible?</h6>
+                                            <div id="demo1" class="collapse in">
+                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                            </div>
+
+
+                                            <h6 data-toggle="collapse" data-target="#demo2">Simple collapsible?</h6>
+                                                <div id="demo2" class="collapse in">
+                                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+
+
+
+                                            <h6 data-toggle="collapse" data-target="#demo3">Simple collapsible?</h6>
+                                            <div id="demo3" class="collapse in">
+                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                            </div>
+
+
+                                        
+                                        </div>
+                            </div>
+
+
+                          
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+<!--</div>-->
+
+
+        <a href="index.html"><img src="./glyphicons/glyphicons-217-circle-arrow-left.png" id="backimg" width="30px"
+                height="30px"></a>
+        <br>
+        <br>
+        <br>
+</body>
+<script>
+    $('#txPesquisa').keypress(function (event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            searchProd();
+        }
+    });
+</script>
+
+</html>
