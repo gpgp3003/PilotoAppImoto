@@ -176,63 +176,73 @@ body {
 
                         <!--FORMAS DE PAGAMENTO-->
                         <div class="col-md-12">
-                                <strong>FORMAS DE PAGAMENTO</strong><br>
+                                <strong>FORMAS DE PAGAMENTO</strong><br><br>
                                 
-                                Cartão de crédito<br>
+                                Cartão de crédito<br><br>
                                 <img src="img/forma-pagamento/visa.png" alt="">
                                 <img src="img/forma-pagamento/mastercard.png" alt="">
                                 <img src="img/forma-pagamento/elo.png" alt="">
                                 <img src="img/forma-pagamento/dinners.png" alt="">
                                 <img src="img/forma-pagamento/american_express.png" alt="">
                                 <img src="img/forma-pagamento/hipercard.png" alt="">    
-                                <br>
+                                <br><br>
                                 
-                                Débito em conta<br>
+                                Débito em conta<br><br>
                                 <img src="img/forma-pagamento/itau.png">
                                 <img src="img/forma-pagamento/boleto.png">
                                 <br>
                         </div>
-
+                        <br><br><br>
                         <!--REDES SOCIAIS-->
-                        <script>
-                                function abreFacebook(){
-                                    var scheme;
-                                    if(device.platform==='IOS'){
-                                        scheme = 'fb://';
-                                    }else if(device.platform==='Android'){
-                                        scheme = 'com.facebook.katana';
-                                    }
-                                    
-                                    
-                                    //appAvailability.check(scheme,
-                                             // InAppBrowser.open('https://facebook.com/ImotopecasMarketplace?'+scheme, '_system','location=yes'),
-                                                cordova.InAppBrowser.open('https://facebook.com/ImotopecasMarketplace?'+scheme, '_system','location=yes')
-                                      //              );
-
-                                    
-                                    /*
-                                    if(cordova.appAvailability.check(scheme,function(){return true;},function(){return false;})){
-                                        cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace','_system','location=yes');
-                                    }else{*/
-                                        
-                                /*    }*/
-                                }
-                        </script>
-                        <div class="col-md-3 social">
-                                <h5>SIGA NOSSAS REDES SOCIAIS</h5>
-                                <ul class="list-display">
-                                  <li><a onclick="abreFacebook()">facebook</a></li>
+                        
+                        <div class="row">
+                            
+                            <div class="col">
+                                <a onclick="cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace','_system','location=yes')">
+                                    <img id="icones_contato" src="./img/redes-sociais/facebookW.png" width="25" height="45">
+                                </a>  
+                            </div>
+                            
+                            <div class="col">
+                                <a onclick="cordova.InAppBrowser.open('https://www.instagram.com/imotopecas/','_system','location=yes')">
+                                    <img id="icones_contato" src="./img/redes-sociais/instagramW.png"  width="25" height="45">
+                                </a>  
+                            </div>
+                            <div class="col">
+                                <a onclick="cordova.InAppBrowser.open('https://www.twitter.com/imotopecas_/','_system','location=yes')">
+                                    <img id="icones_contato" src="./img/redes-sociais/twitterW.png"  width="25" height="45">
+                                </a>  
+                            </div>
+                            <div class="col">
+                                <a onclick="cordova.InAppBrowser.open('https://www.youtube.com/channel/UCa10bkhJsv-qb6PFDEVUqhA','_system','location=yes')">
+                                    <img id="icones_contato" src="./img/redes-sociais/youtubeW.png"  width="25" height="45">
+                                </a>  
+                            </div>
+                            <div class="col">
+                                <a onclick="cordova.InAppBrowser.open('https://plus.google.com/+ImotopecasMarketplace','_system','location=yes')">
+                                    <img id="icones_contato" src="./img/redes-sociais/googleplusW.png"  width="25" height="45">
+                                </a>  
+                                
+                            </div> 
+                              
+                            <!--
+                            <ul class="list-display">
+                                  <li><a onclick="cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace')">facebook</a></li>
                                   <li><a onclick="cordova.InAppBrowser.open('https://www.instagram.com/imotopecas/','_system','location=yes')">instagram</a></li>
                                   <li><a onclick="cordova.InAppBrowser.open('https://www.twitter.com/imotopecas_/','_system','location=yes')"  class="twitter">twitter</a></li>
                                   <li><a onclick="cordova.InAppBrowser.open('https://www.youtube.com/channel/UCa10bkhJsv-qb6PFDEVUqhA','_system','location=yes')">youtube</a></li>
                                   <li><a onclick="cordova.InAppBrowser.open('https://plus.google.com/+ImotopecasMarketplace','_system','location=yes')">googleplus</a></li>
-                                </ul>                        
+                                </ul>  -->                      
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <a href="index.html"><img src="./glyphicons/glyphicons-217-circle-arrow-left.png" id="backimg"  width="30px" height="30px"></a>
+
+
 </footer>
 </body>
 <script>
@@ -242,5 +252,27 @@ $('#txPesquisa').keypress(function(event) {
         searchProd();
     }
 });
+
+ document.addEventListener('deviceready', function () {
+    // cordova.plugins.email is now available
+}, false);
+
+cordova.email.isAvailable(
+    function (isAvailable) {
+        // alert('Service is not available') unless isAvailable;
+    }
+);
+    function enviar(){
+
+    cordova.email.open({
+        to:      'gianpgp@primeinformatica.com.br',
+        cc:      [],
+        bcc:     [],
+        subject: 'Greetings',
+        body:    'How are you? Nice greetings from Leipzig'
+    });
+}
+
+
 </script>
 </html>

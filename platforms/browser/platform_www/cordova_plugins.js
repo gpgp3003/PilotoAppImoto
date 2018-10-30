@@ -595,6 +595,21 @@ module.exports = [
         "clobbers": [
             "SQLitePlugin"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-email/www/email_composer.js",
+        "id": "cordova-plugin-email.EmailComposer",
+        "pluginId": "cordova-plugin-email",
+        "clobbers": [
+            "cordova.plugins.email",
+            "plugin.email"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-email/src/browser/EmailComposerProxy.js",
+        "id": "cordova-plugin-email.EmailComposerProxy",
+        "pluginId": "cordova-plugin-email",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -618,7 +633,8 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-vibration": "3.1.0",
     "cordova-plugin-whitelist": "1.3.3",
-    "cordova-sqlite-storage": "2.4.0"
+    "cordova-sqlite-storage": "2.4.0",
+    "cordova-plugin-email": "1.2.7"
 }
 // BOTTOM OF METADATA
 });

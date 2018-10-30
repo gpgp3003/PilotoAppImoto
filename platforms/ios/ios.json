@@ -83,6 +83,20 @@
             {
               "xml": "<feature name=\"SQLitePlugin\"><param name=\"ios-package\" value=\"SQLitePlugin\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"EmailComposer\"><param name=\"ios-package\" value=\"APPEmailComposer\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "*-Info.plist": {
+        "parents": {
+          "LSApplicationQueriesSchemes": [
+            {
+              "xml": "<array><string>mailto</string></array>",
+              "count": 1
             }
           ]
         }
@@ -143,6 +157,9 @@
       "PACKAGE_NAME": "br.com.imotopecas.store"
     },
     "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "br.com.imotopecas.store"
+    },
+    "cordova-plugin-email": {
       "PACKAGE_NAME": "br.com.imotopecas.store"
     }
   },
@@ -693,6 +710,15 @@
       "clobbers": [
         "SQLitePlugin"
       ]
+    },
+    {
+      "id": "cordova-plugin-email.EmailComposer",
+      "file": "plugins/cordova-plugin-email/www/email_composer.js",
+      "pluginId": "cordova-plugin-email",
+      "clobbers": [
+        "cordova.plugins.email",
+        "plugin.email"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -713,6 +739,7 @@
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-vibration": "3.1.0",
     "cordova-plugin-whitelist": "1.3.3",
-    "cordova-sqlite-storage": "2.4.0"
+    "cordova-sqlite-storage": "2.4.0",
+    "cordova-plugin-email": "1.2.7"
   }
 }

@@ -43,6 +43,8 @@ body {
     padding-top: 130px !important;
     padding-bottom: 0px !important;
 }
+
+
 </style>
 </head>
 <body class="panel panel-transparent bg-light">
@@ -239,6 +241,9 @@ body {
             </div>
         </div>
     </div>
+
+    <button onclick="enviar()">Enviar Email</button>
+
 </footer>
 </body>
 <script>
@@ -248,5 +253,27 @@ $('#txPesquisa').keypress(function(event) {
         searchProd();
     }
 });
+
+ document.addEventListener('deviceready', function () {
+    // cordova.plugins.email is now available
+}, false);
+
+cordova.plugins.email.isAvailable(
+    function (isAvailable) {
+        // alert('Service is not available') unless isAvailable;
+    }
+);
+    function enviar(){
+
+    cordova.plugins.email.open({
+        to:      'yagolp@primeinformatica.com.br',
+        cc:      [],
+        bcc:     [],
+        subject: 'Greetings',
+        body:    'How are you? Nice greetings from Leipzig'
+    });
+}
+
+
 </script>
 </html>

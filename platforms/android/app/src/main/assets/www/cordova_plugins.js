@@ -519,11 +519,12 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-appavailability.AppAvailability",
-    "file": "plugins/cordova-plugin-appavailability/www/AppAvailability.js",
-    "pluginId": "cordova-plugin-appavailability",
+    "id": "cordova-plugin-email.EmailComposer",
+    "file": "plugins/cordova-plugin-email/www/email_composer.js",
+    "pluginId": "cordova-plugin-email",
     "clobbers": [
-      "appAvailability"
+      "cordova.plugins.email",
+      "plugin.email"
     ]
   }
 ];
@@ -549,7 +550,7 @@ module.exports.metadata =
   "cordova-plugin-vibration": "3.1.0",
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-sqlite-storage": "2.4.0",
-  "cordova-plugin-appavailability": "0.4.2"
+  "cordova-plugin-email": "1.2.7"
 };
 // BOTTOM OF METADATA
 });
