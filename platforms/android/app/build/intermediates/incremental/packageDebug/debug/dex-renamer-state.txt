@@ -1,4 +1,4 @@
-#Tue Oct 30 19:19:03 BRST 2018
+#Wed Oct 31 11:38:21 BRST 2018
 base.0=E\:\\imotopecas\\app-imotopecas-cordova\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
 file.0=E\:\\imotopecas\\app-imotopecas-cordova\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

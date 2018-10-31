@@ -268,11 +268,17 @@ html {
 
 <div class="container" id="mainbody">
 
-        <div class="row bg-danger mb-2" id="div-filtro"> 
-            <a data-toggle="collapse" href="#filtro-categorias" class="text-white"> 
+        <div class="row" id="div-filtro"> 
+            <!--<a data-toggle="collapse" href="#filtro-categorias" class="text-white"> 
                 <img src="./glyphicons/glyphicons-321-filter-branco.png" width="12" heigth="12"/>
                 <small><b>FILTRAR</b></small>
-            </a>
+            </a>-->
+
+            <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1 mr-4" data-toggle="collapse" href="#filtro-categorias">
+                    <img src="./glyphicons/glyphicons-321-filter.png" width="10" height="15"> 
+                    Filtrar
+            </a>                    
+
         </div>
 
         <div class="collapse mt-2" id="filtro-categorias">
@@ -319,17 +325,17 @@ html {
                 <div class="collapse" id="subcategoria-categoria">
 
                         <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="bateria">
+                                <input type="checkbox" class="custom-control-input pt-3 pb-3" id="bateria">
                                 <label class="custom-control-label" for="bateria">Bateria</label>
                                 <b>(10)</b>
                         </div>
                         <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="cabo">
+                                <input type="checkbox" class="custom-control-input pt-3 pb-3" id="cabo">
                                 <label class="custom-control-label" for="cabo">Cabo</label>
                                 <b>(4)</b>
                         </div>
                         <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="car">
+                                <input type="checkbox" class="custom-control-input pt-3 pb-3" id="car">
                                 <label class="custom-control-label" for="car">Carenagem</label>
                                 <b>(4)</b>
                         </div>
@@ -344,7 +350,7 @@ html {
                 </div>
                 <div class="collapse" id="subcategoria-estado">
                             <div class="custom-control custom-checkbox mr-sm-2">
-                              <input type="checkbox" class="custom-control-input" id="sp">
+                              <input type="checkbox" class="custom-control-input pt-3 pb-3" id="sp">
                               <label class="custom-control-label" for="sp">SP</label>
                               <b>(100)</b>
                             </div>
@@ -358,22 +364,22 @@ html {
                 </div>
                 <div class="collapse" id="subcategoria-produto">
                         <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="cap">
+                                <input type="checkbox" class="custom-control-input pt-3 pb-3" id="cap">
                                 <label class="custom-control-label" for="cap">Capacete</label>
                                 <b>(80)</b>
                         </div>
                         <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="pneu">
+                                <input type="checkbox" class="custom-control-input pt-3 pb-3" id="pneu">
                                 <label class="custom-control-label" for="pneu">Pneu</label>
                                 <b>(2)</b>
                         </div>
                         <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="luva">
+                                <input type="checkbox" class="custom-control-input pt-3 pb-3" id="luva">
                                 <label class="custom-control-label" for="luva">Luva</label>
                                 <b>(10)</b>
                         </div>
                         <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="retro">
+                                <input type="checkbox" class="custom-control-input pt-3 pb-3" id="retro">
                                 <label class="custom-control-label" for="retro">Retrovisor</label>
                                 <b>(1)</b>
                         </div>
@@ -387,12 +393,12 @@ html {
                 </div>
                 <div class="collapse" id="subcategoria-marca">
                         <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="honda">
+                                <input type="checkbox" class="custom-control-input pt-3 pb-3" id="honda">
                                 <label class="custom-control-label" for="honda">Honda</label>
                                 <b>(2)</b>
                         </div>
                         <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="suz">
+                                <input type="checkbox" class="custom-control-input pt-3 pb-3" id="suz">
                                 <label class="custom-control-label" for="suz">Suzuki</label>
                                 <b>(5)</b>
                         </div>
@@ -406,7 +412,7 @@ html {
                 </div>
                 <div class="collapse" id="subcategoria-material">
                         <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="couro">
+                                <input type="checkbox" class="custom-control-input pt-3 pb-3" id="couro">
                                 <label class="custom-control-label" for="couro">Couro</label>
                                 <b>(2)</b>
                         </div>
@@ -420,12 +426,12 @@ html {
                 </div>
                 <div class="collapse" id="subcategoria-cor">
                         <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="az">
+                                <input type="checkbox" class="custom-control-input pt-3 pb-3" id="az">
                                 <label class="custom-control-label" for="az">Azul</label>
                                 <b>(10)</b>
                         </div>
                         <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="ver">
+                                <input type="checkbox" class="custom-control-input pt-3 pb-3" id="ver">
                                 <label class="custom-control-label" for="ver">Vermelho</label>
                                 <b>(4)</b>
                         </div>
