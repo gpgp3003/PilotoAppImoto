@@ -12,12 +12,14 @@
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/popper.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript" src="js/mask.js"></script>
 <script type="text/javascript">
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady(){
     document.addEventListener("backbutton", onBackKeyDown, false);
     iniciaApp();
+    //loadCategories();
 }
     
 function onBackKeyDown() { if(device.platform=="iOS"){
@@ -26,6 +28,18 @@ function onBackKeyDown() { if(device.platform=="iOS"){
         //navigator.app.backHistory();
     }
 }
+
+//$(function() {
+    //Enable swiping...
+    //$("body").swipe( {
+        //Generic swipe handler for all directions
+        //swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+            //alert("You swiped " + direction );
+        //},
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        //threshold:0
+    //});
+//});
 
 </script>
 <style type="text/css">
@@ -40,32 +54,21 @@ html {
 }
 
 body {
-    padding-top: 130px !important;
+    /*padding-top: 130px !important;*/
     padding-bottom: 0px !important;
 }
 </style>
 </head>
 <body class="panel panel-transparent bg-light">
-<nav class="navbar navbar-light fixed-top navbar-default bg-white" >
-    <div class="navbar-brand">
-        <button type="button" class="btn btn-light d-inline-block align-center button-menu" alt="" onclick="showhidemenu();"><img src="./glyphicons/glyphicons-517-menu-hamburger.png" width="25" height="18"></button>
-        <img src="./img/Logo.png" width="123" height="30" class="d-inline-block align-center" alt="">
-    </div>
-</nav>
-<div class="bg-light" id="CategoriesMenu">
-    <div class="list-group list-group-flush bg-light" id="menuInicio">
-        <h5 class="text-dark m-3 h4">Todos os departamentos<hr></h5>
-    </div>
-</div>
-<div class="input-group mb-3 search-box">
+<!--<div class="input-group mb-3 search-box">
     <input type="text" id="txPesquisa" class="form-control" placeholder="Pesquise..." aria-label="Filtrar" aria-describedby="txPesquisa">
     <div class="input-group-append">
         <span class="input-group-text glyphicon glyphicon-search" aria-hidden="true">
             <img src="./glyphicons/glyphicons-28-search.png" width="20" height="20" alt="" onclick="searchProd();">
         </span>
     </div>
-</div>
-
+</div>-->
+<div class="container">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -154,36 +157,10 @@ body {
 
 
 
-<!-- botoes acesso -->
-<div class="container">
-
-
-
-        <a href="sobre.html"> <button type="button" class="btn btn-danger btn-lg btn-block">Sobre</button></a>
-    <br>
-    
-        <a href="https://lojista-dev.imotopecas.com.br/parceiro"></a><button type="button" class="btn btn-danger btn-lg btn-block">Seja um parceiro</button></a>
-  <br>
-  
-        <a href="https://lojista-dev.imotopecas.com.br/"> <button type="button" class="btn btn-danger btn-lg btn-block">Área do lojista</button></a>
- <br>
-        <a href="https://dev.imotopecas.com.br/fale-conosco"> <button type="button" class="btn btn-danger btn-lg btn-block">Fale conosco</button></a>
-  
-
-    </div>
-  <!-- fim botoes -->
-
 <br>
-<h5 class="m-3 h4"><hr></h5>
+
+</div>
 <footer>
-    <div class="container footer-links">
-        <div class="row">
-            <div class="col-md-12 imotopecas-info mobile-only">
-                <p>IMOTOPEÇAS</p>
-                <p>CNPJ: 28.967.299/0001-77<br>ALAMEDA TOCANTINS, 75<br />2º ANDAR – SALA 210<br />ALPHAVILLE, BARUERI, SP, CEP 06455-020</p>
-            </div>
-        </div>
-    </div>
     <div class="credits">
         <div class="container">
             <div class="row">

@@ -12,6 +12,7 @@
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/popper.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript" src="js/mask.js"></script>
 <script type="text/javascript">
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -27,6 +28,18 @@ function onBackKeyDown() { if(device.platform=="iOS"){
         //navigator.app.backHistory();
     }
 }
+
+//$(function() {
+    //Enable swiping...
+    //$("body").swipe( {
+        //Generic swipe handler for all directions
+        //swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+            //alert("You swiped " + direction );
+        //},
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        //threshold:0
+    //});
+//});
 
 </script>
 <style type="text/css">
@@ -55,6 +68,7 @@ body {
         </span>
     </div>
 </div>-->
+<div class="container-fluid">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -144,6 +158,8 @@ body {
 
 
 <br>
+
+</div>
 <footer>
     <div class="credits">
         <div class="container">
