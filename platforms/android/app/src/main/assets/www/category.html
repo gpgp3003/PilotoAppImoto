@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html onclick="limpaFiltro(event)">
+<html onclick="fechaFiltro(event)">
 <head>
 <meta charset="utf-8" />
 <meta name="format-detection" content="telephone=no" />
@@ -437,9 +437,9 @@ html {
                             <img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15"> 
                         </a>   
                 </div>
-                <div class="collapse slidecontainer" id="subcategoria-preco">
-                    <input type="range" id="myRange" value="1" max="100" class="slider mt-3">
-                    <b><div class="row pl-3">R$<div id="demo">1</div>,00</div></b>
+                <div class="collapse slidecontainer mr-3" id="subcategoria-preco">
+                    <b><div class="row pl-3">R$<div id="preco">1</div>,00</div></b>
+                    <input type="range" id="rangePreco" value="1" max="100" class="slider mt-3">
                 </div>
 
             </div>        
@@ -478,8 +478,8 @@ $('#txPesquisa').keypress(function(event) {
     }
 });
 //função da para que seleciona o preço
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+var slider = document.getElementById("rangePreco");
+var output = document.getElementById("preco");
 output.innerHTML = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
@@ -487,10 +487,11 @@ slider.oninput = function() {
     output.innerHTML = this.value;
 }
 
-function limpaFiltro(e){
+function fechaFiltro(e){
     var $target = $(e.target);
     if (!$target.is('#filtro-categorias') &&
         !$target.parents('#filtro-categorias').length) {
+
         $(".collapse").collapse('hide');
     }
 }
