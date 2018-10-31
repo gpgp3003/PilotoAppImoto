@@ -10,9 +10,8 @@
     "author": "Apache Cordova Team",
     "license": "Apache-2.0",
     "dependencies": {
-        "cordova-android": "^7.0.0",
+        "cordova-android": "^7.1.1",
         "cordova-browser": "^5.0.4",
-        "cordova-ios": "^4.5.5",
         "cordova-plugin-camera": "^4.0.3",
         "cordova-plugin-console": "^1.1.0",
         "cordova-plugin-contacts": "^3.0.1",
@@ -22,6 +21,7 @@
         "cordova-plugin-dialogs": "^2.0.1",
         "cordova-plugin-email": "^1.2.7",
         "cordova-plugin-file": "^6.0.1",
+        "cordova-plugin-file-opener2": "^2.0.19",
         "cordova-plugin-file-transfer": "^1.7.1",
         "cordova-plugin-geolocation": "^4.0.1",
         "cordova-plugin-globalization": "^1.11.0",
@@ -55,12 +55,20 @@
             "cordova-plugin-vibration": {},
             "cordova-plugin-whitelist": {},
             "cordova-sqlite-storage": {},
+<<<<<<< HEAD
             "cordova-plugin-email": {}
         },
         "platforms": [
             "android",
             "browser",
             "ios"
+=======
+            "cordova-plugin-file-opener2": {}
+        },
+        "platforms": [
+            "browser",
+            "android"
+>>>>>>> e18887906075dc89dde5564b3672df6f1178165c
         ]
     }
 }

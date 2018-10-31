@@ -21,6 +21,7 @@ var lastIdx = 0;
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady(){
     document.addEventListener("backbutton", onBackKeyDown, false);
+    iniciaApp();
     startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
     getUrlVars();
 }
@@ -217,6 +218,7 @@ html {
     transform: rotate(90deg);
 }
 
+<<<<<<< HEAD
 
 .btn:hover {
   text-decoration: none;
@@ -228,6 +230,10 @@ html {
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
+=======
+body {
+    padding-top: 130px !important;
+>>>>>>> e18887906075dc89dde5564b3672df6f1178165c
 }
 
 #radioBtn .notActive{
@@ -242,6 +248,7 @@ html {
 </head>
 <body class="panel panel-transparent bg-light" onscroll="detectScroll();" >
 <img src="./glyphicons/glyphicons-217-circle-arrow-left.png" id="backimg" onclick="onBackKeyDown();" width="30px" height="30px">
+<<<<<<< HEAD
 <nav class="navbar navbar-light fixed-top navbar-default bg-white" >
     <div class="navbar-brand">
         <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -447,6 +454,13 @@ html {
 
         </div>
 
+=======
+
+<div class="bg-white rounded boxshadow border-0 titulo-pag">
+    <h5 id="titCateg"></h5>
+</div>
+<div class="container-fluid panel-body" id="mainbody">
+>>>>>>> e18887906075dc89dde5564b3672df6f1178165c
     <!--<div class="card mt-3 rounded boxshadow border-0">
         <a class="card-body">
             <img class="float-left mr-3" width="45" height="25" src="./img/moto.png" alt="">

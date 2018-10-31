@@ -105,20 +105,25 @@ function hideAppIcon(){
 }
 
 function iniciaApp(){
-    if(window.localStorage.getItem("imotoCateg")==null){
-        loadCategories();
-    } else {
-        if(window.localStorage.getItem("imotoCateg").length==0){
-            loadCategories();
-        } else {
-            if(window.localStorage.getItem("imotoCategUpd")==null){
-                loadCategories();
-            } else {
-                //
-                startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
-            }
-        }
-    }
+    $.get("header.html", function(data){
+        $('body').append(data);
+    });
+    $.get("menu.html", function(data){
+        $('body').append(data);
+    });
+    //if(window.localStorage.getItem("imotoCateg")==null){
+    //    loadCategories();
+    //} else {
+    //    if(window.localStorage.getItem("imotoCateg").length==0){
+    //        loadCategories();
+    //    } else {
+    //        //if(window.localStorage.getItem("imotoCategUpd")==null){
+                //loadCategories();
+            //} else {
+                //startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
+            //}
+    //    }
+    //}
 }
 
 function loadCategories(){

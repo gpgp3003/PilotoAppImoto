@@ -18,6 +18,7 @@ var idPrd = 0;
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady(){
     document.addEventListener("backbutton", onBackKeyDown, false);
+    iniciaApp();
     startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
     getUrlVars();
 }
@@ -102,31 +103,12 @@ html {
 }
 
 body {
-    padding-top: 130px !important;
+    /*padding-top: 130px !important; */
 }
 </style>
 </head>
 <body class="panel panel-transparent bg-light">
 <img src="./glyphicons/glyphicons-217-circle-arrow-left.png" id="backimg" onclick="onBackKeyDown();" width="30px" height="30px">
-<nav class="navbar navbar-light fixed-top navbar-default bg-white" >
-    <div class="navbar-brand">
-        <button type="button" class="btn btn-light d-inline-block align-center button-menu" alt="" onclick="showhidemenu();"><img src="./glyphicons/glyphicons-517-menu-hamburger.png" width="25" height="18"></button>
-        <a class="d-inline-block align-center" href="index.html"><img src="./img/Logo.png" width="123" height="30" alt=""></a>
-    </div>
-</nav>
-<div class="bg-light" id="CategoriesMenu">
-    <div class="list-group list-group-flush bg-light" id="menuInicio">
-        <h5 class="text-dark m-3 h4">Todos os departamentos<hr></h5>
-    </div>
-</div>
-<div class="input-group mb-3 search-box">
-    <input type="text" id="txPesquisa" class="form-control" placeholder="Pesquise..." aria-label="Filtrar" aria-describedby="btPesquisa">
-    <div class="input-group-append">
-        <span class="input-group-text glyphicon glyphicon-search" aria-hidden="true">
-            <img src="./glyphicons/glyphicons-28-search.png" width="20" height="20" alt="" onclick="searchProd();">
-        </span>
-    </div>
-</div>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators" id="indicator">

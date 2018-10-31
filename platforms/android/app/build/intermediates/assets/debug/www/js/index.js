@@ -105,20 +105,25 @@ function hideAppIcon(){
 }
 
 function iniciaApp(){
-    if(window.localStorage.getItem("imotoCateg")==null){
-        loadCategories();
-    } else {
-        if(window.localStorage.getItem("imotoCateg").length==0){
-            loadCategories();
-        } else {
-            if(window.localStorage.getItem("imotoCategUpd")==null){
-                loadCategories();
-            } else {
-                //
-                startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
-            }
-        }
-    }
+    $.get("header.html", function(data){
+        $('body').append(data);
+    });
+    $.get("menu.html", function(data){
+        $('body').append(data);
+    });
+    //if(window.localStorage.getItem("imotoCateg")==null){
+    //    loadCategories();
+    //} else {
+    //    if(window.localStorage.getItem("imotoCateg").length==0){
+    //        loadCategories();
+    //    } else {
+    //        //if(window.localStorage.getItem("imotoCategUpd")==null){
+                //loadCategories();
+            //} else {
+                //startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
+            //}
+    //    }
+    //}
 }
 
 /*function loadCategories(){
@@ -267,4 +272,40 @@ function searchProd(){
     if(txSearch.length>=3){
         window.location = './search.html?strSearch=' + txSearch;
     }
+}
+
+function openFacebook(){
+    if(device.platform=="iOS"){
+        openFaceiOS();
+    } else if(device.platform=="Android") {
+        openFaceAndroid();
+    }
+}
+
+function openFaceiOS(){
+    cordova.plugins.fileOpener2.appIsInstalled('fb://', {
+        success : function(res) {
+            if (res.status === 0) {
+                //não está instalado
+                cordova.InAppBrowser.open('https://www.facebook.com/ImotopecasMarketplace','_system','location=yes');
+            } else {
+                //já está instalado
+                cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace','_system','location=yes');
+            }
+        }
+    });
+}
+
+function openFaceAndroid(){
+    cordova.plugins.fileOpener2.appIsInstalled('com.facebook.katana', {
+        success : function(res) {
+            if (res.status === 0) {
+                //não está instalado
+                cordova.InAppBrowser.open('https://www.facebook.com/ImotopecasMarketplace','_system','location=yes');
+            } else {
+                //já está instalado
+                cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace','_system','location=yes');
+            }
+        }
+    });
 }
