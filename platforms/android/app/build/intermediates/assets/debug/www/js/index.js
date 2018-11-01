@@ -126,7 +126,7 @@ function iniciaApp(){
     //}
 }
 
-function loadCategories(){
+/*function loadCategories(){
     showAppMsg('Carregando App');
     var urlServer = strServer + "/categories.php";
     $.getJSON(urlServer, function(result){
@@ -142,7 +142,7 @@ function loadCategories(){
     }).done(function() {
         //
     });
-}
+}*/
 
 function startMenu(objCateg){
     $.each(objCateg.info, function(i, dados){

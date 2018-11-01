@@ -1,6 +1,12 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
+            "outputFile": "E:\\imotopecas\\app-imotopecas-cordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "E:\\imotopecas\\app-imotopecas-cordova\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
+=======
             "outputFile": "/Users/fabioohtsuki/Documents/Development/Git/iMotoPecas/platforms/android/app/build/intermediates/res/merged/debug/values-el_values-el.arsc.flat",
             "map": [
                 {
@@ -438,6 +444,7 @@
             "map": [
                 {
                     "source": "/Users/fabioohtsuki/Documents/Development/Git/iMotoPecas/platforms/android/app/src/main/res/values/strings.xml",
+>>>>>>> e18887906075dc89dde5564b3672df6f1178165c
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",
