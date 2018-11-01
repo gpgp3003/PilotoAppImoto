@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html onclick="fechaFiltro(event)" >
 <head>
 <meta charset="utf-8" />
 <meta name="format-detection" content="telephone=no" />
@@ -22,6 +22,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady(){
     document.addEventListener("backbutton", onBackKeyDown, false);
     iniciaApp();
+    $.get("filtro.html", function(data){
+        $('#mainbody').prepend(data);
+    });
     startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
     getUrlVars();
 }
@@ -171,26 +174,15 @@ html {
     -o-background-size: 100% auto;
 }
 
-body {
-    padding-top: 130px !important;
-}
 </style>
 </head>
 <body class="panel panel-transparent bg-light" onscroll="detectScroll();">
 <img src="./glyphicons/glyphicons-217-circle-arrow-left.png" id="backimg" onclick="onBackKeyDown();" width="30px" height="30px">
-
-<div class="bg-white rounded boxshadow border-0 titulo-pag">
-    <h5 id="titCateg"></h5>
-</div>
 <div class="container-fluid panel-body" id="mainbody">
-    <!--<div class="card mt-3 rounded boxshadow border-0">
-        <a class="card-body">
-            <img class="float-left mr-3" width="45" height="25" src="./img/moto.png" alt="">
-            <p class="card-text">Peças e Acessórios para você e sua moto, confira!</p>
-        </a>
-    </div>-->
-
-    <!--<h5 class="m-3 h4">Destaques</h5>-->
+    <!-- Aqui vai o filtro -->
+    <div class="bg-white rounded boxshadow border-0 mt-3 titulo-pag">
+        <h5 id="titCateg"></h5>
+    </div>
     <div class="list-group" id="tbProd">
     </div>
 </div>

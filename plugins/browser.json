@@ -63,9 +63,6 @@
     },
     "cordova-sqlite-storage": {
       "PACKAGE_NAME": "br.com.imotopecas.store"
-    },
-    "cordova-plugin-file-opener2": {
-      "PACKAGE_NAME": "br.com.imotopecas.store"
     }
   },
   "dependent_plugins": {}

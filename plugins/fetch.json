@@ -150,13 +150,5 @@
     },
     "is_top_level": true,
     "variables": {}
-  },
-  "cordova-plugin-file-opener2": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-file-opener2"
-    },
-    "is_top_level": true,
-    "variables": {}
   }
 }

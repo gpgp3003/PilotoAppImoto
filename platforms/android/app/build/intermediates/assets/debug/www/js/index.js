@@ -106,10 +106,10 @@ function hideAppIcon(){
 
 function iniciaApp(){
     $.get("header.html", function(data){
-        $('body').append(data);
+        $('body').prepend(data);
     });
     $.get("menu.html", function(data){
-        $('body').append(data);
+        $('body').prepend(data);
     });
     //if(window.localStorage.getItem("imotoCateg")==null){
     //    loadCategories();
@@ -283,29 +283,31 @@ function openFacebook(){
 }
 
 function openFaceiOS(){
-    cordova.plugins.fileOpener2.appIsInstalled('fb://', {
-        success : function(res) {
-            if (res.status === 0) {
-                //não está instalado
-                cordova.InAppBrowser.open('https://www.facebook.com/ImotopecasMarketplace','_system','location=yes');
-            } else {
-                //já está instalado
-                cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace','_system','location=yes');
-            }
-        }
-    });
+    //cordova.plugins.fileOpener2.appIsInstalled('fb://', {
+    //    success : function(res) {
+    //        if (res.status === 0) {
+    //            //não está instalado
+    //            cordova.InAppBrowser.open('https://www.facebook.com/ImotopecasMarketplace','_system','location=yes');
+    //        } else {
+    //            //já está instalado
+    //            cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace','_system','location=yes');
+    //        }
+    //    }
+    //});
+    alert("ios");
 }
 
 function openFaceAndroid(){
-    cordova.plugins.fileOpener2.appIsInstalled('com.facebook.katana', {
-        success : function(res) {
-            if (res.status === 0) {
-                //não está instalado
-                cordova.InAppBrowser.open('https://www.facebook.com/ImotopecasMarketplace','_system','location=yes');
-            } else {
-                //já está instalado
-                cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace','_system','location=yes');
-            }
-        }
-    });
+    //cordova.plugins.fileOpener2.appIsInstalled('com.facebook.katana', {
+    //    success : function(res) {
+    //        if (res.status === 0) {
+    //            //não está instalado
+    //            cordova.InAppBrowser.open('https://www.facebook.com/ImotopecasMarketplace','_system','location=yes');
+    //        } else {
+    //            //já está instalado
+    //            cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace','_system','location=yes');
+    //        }
+    //    }
+    //});
+    alert("android");
 }

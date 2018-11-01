@@ -54,12 +54,13 @@ html {
 }
 
 body {
-    /*padding-top: 130px !important;*/
+    padding-top: 63px !important;
     padding-bottom: 0px !important;
 }
 </style>
 </head>
 <body class="panel panel-transparent bg-light">
+<div class="container-fluid px-0">
 <!--<div class="input-group mb-3 search-box">
     <input type="text" id="txPesquisa" class="form-control" placeholder="Pesquise..." aria-label="Filtrar" aria-describedby="txPesquisa">
     <div class="input-group-append">
@@ -68,7 +69,6 @@ body {
         </span>
     </div>
 </div>-->
-<div class="container-fluid">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -97,34 +97,7 @@ body {
 </div>
 
 <div class="container-fluid panel-body">
-
-    <!--<div class="card mt-3 rounded boxshadow border-0">
-        <a class="card-body">
-            <img class="float-left mr-3" width="45" height="25" src="./img/moto.png" alt="">
-            <p class="card-text">Peças e Acessórios para você e sua moto, confira!</p>
-        </a>
-    </div>
-    <div class="card mt-3 rounded boxshadow border-0">
-        <a class="card-body">
-            <img class="float-left mr-3" width="45" height="25" src="./img/moto.png" alt="">
-            <p class="card-text">As melhores oportunidades do mercado estão aqui</p>
-        </a>
-    </div>
-    <div class="card mt-3 rounded boxshadow border-0">
-        <a class="card-body">
-            <img class="float-left mr-3" width="45" height="25" src="./img/moto.png" alt="">
-            <p class="card-text">Entregamos para todo o Brasil com qualidade</p>
-        </a>
-    </div>
-    <div class="card mt-3 rounded boxshadow border-0">
-        <a class="card-body">
-            <img class="float-left mr-3" width="45" height="25" src="./img/moto.png" alt="">
-            <p class="card-text">Você pode comprar e vender num click</p>
-        </a>
-    </div>-->
-
     <h5 class="m-3 h4">Navegue por Categorias<hr></h5>
-
     <a class="card mt-3 boxshadow border-0" href="./category.html?tipo=1&idCtg=31">
         <span class="notify-badge">Vestuário</span>
         <img class="card-img" src="./img/category1.jpg" alt="">
@@ -152,14 +125,35 @@ body {
     <!--<a class="card mt-3 boxshadow border-0" href="./category.html?tipo=1&idCtg=">
         <img class="img-fluid" src="./img/category7.png" alt="">
     </a>-->
+
+    <!--<div class="card mt-3 rounded boxshadow border-0">
+        <a class="card-body">
+            <img class="float-left mr-3" width="45" height="25" src="./img/moto.png" alt="">
+            <p class="card-text">Peças e Acessórios para você e sua moto, confira!</p>
+        </a>
+    </div>
+    <div class="card mt-3 rounded boxshadow border-0">
+        <a class="card-body">
+            <img class="float-left mr-3" width="45" height="25" src="./img/moto.png" alt="">
+            <p class="card-text">As melhores oportunidades do mercado estão aqui</p>
+        </a>
+    </div>
+    <div class="card mt-3 rounded boxshadow border-0">
+        <a class="card-body">
+            <img class="float-left mr-3" width="45" height="25" src="./img/moto.png" alt="">
+            <p class="card-text">Entregamos para todo o Brasil com qualidade</p>
+        </a>
+    </div>
+    <div class="card mt-3 rounded boxshadow border-0">
+        <a class="card-body">
+            <img class="float-left mr-3" width="45" height="25" src="./img/moto.png" alt="">
+            <p class="card-text">Você pode comprar e vender num click</p>
+        </a>
+    </div>-->
+</div>
 </div>
 <br>
-
-
-
 <br>
-
-</div>
 <footer>
     <div class="credits">
         <div class="container">
@@ -177,11 +171,11 @@ body {
 </footer>
 </body>
 <script>
-$('#txPesquisa').keypress(function(event) {
-    var keycode = (event.keyCode ? event.keyCode : event.which);
-    if(keycode == '13'){
-        searchProd();
-    }
-});
+//$('#txPesquisa').keypress(function(event) {
+//    var keycode = (event.keyCode ? event.keyCode : event.which);
+//    if(keycode == '13'){
+//        searchProd();
+//    }
+//});
 </script>
 </html>

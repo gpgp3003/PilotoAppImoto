@@ -31,9 +31,6 @@
     "cordova-plugin-file": {
       "PACKAGE_NAME": "br.com.imotopecas.store"
     },
-    "cordova-plugin-file-opener2": {
-      "PACKAGE_NAME": "br.com.imotopecas.store"
-    },
     "cordova-plugin-file-transfer": {
       "PACKAGE_NAME": "br.com.imotopecas.store"
     },

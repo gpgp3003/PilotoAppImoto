@@ -1,0 +1,214 @@
+<div class="row" id="div-filtro"> 
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1 mr-3" data-toggle="collapse" href="#filtro-categorias">
+                <img src="./glyphicons/glyphicons-321-filter.png" width="10" height="15"> 
+                Filtrar
+        </a>                    
+    </div>
+
+    <div class="collapse mt-2" id="filtro-categorias">
+            <div class="row">
+                <div class="col">
+                    <a class="flex-column align-items-start bg-light p4 text-dark h6 border-1 mr-4" data-toggle="collapse" href="#ordenacao" >
+                        <img src="glyphicons/glyphicons-404-sorting.png" width="20" height="17">
+                        Ordenar...
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="flex-column align-items-start bg-light p4 pr-2 text-dark h6 border-1 float-right mr-2" href="#">
+                        <img src="glyphicons/glyphicons-68-cleaning.png" width="20" height="17">
+                        Limpar Filtro
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse mb-2" id="ordenacao">
+                    <div class="input-group">
+                            <div id="radioBtn" class="btn-group">
+                                <a class="btn btn-outline-danger pr-1 pl-1 mt-1" data-toggle="ordenacao" data-title="Relevância">
+                                    <b>Relevância</b>
+                                </a>
+                                <a class="btn btn-outline-danger pr-1 pl-1 mt-1" data-toggle="ordenacao" data-title="Nome">
+                                    <b>Nome</b>
+                                </a>
+                                <a class="btn btn-outline-danger pr-1 pl-1 mt-1" data-toggle="ordenacao" data-title="Preço">
+                                    <b>Preço</b>
+                                </a>
+                                <a class="btn btn-outline-danger pr-1 pl-1 mt-1" data-toggle="ordenacao" data-title="Marca">
+                                    <b>Marca</b>
+                                </a>
+                            </div>
+                            <input type="hidden" name="ordenacao" id="ordenacao">
+                        </div>
+            </div>
+            <div class="row">
+                    <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1 mb-2 mr-4" data-toggle="collapse" href="#subcategoria-categoria" >
+                            Categoria
+                            <img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15"> 
+                    </a>                    
+            </div>
+            <div class="collapse" id="subcategoria-categoria">
+
+                    <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                            <input type="checkbox" class="custom-control-input" id="bateria">
+                            <label class="custom-control-label" for="bateria">Bateria</label>
+                            <b>(10)</b>
+                    </div>
+                    <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                            <input type="checkbox" class="custom-control-input" id="cabo">
+                            <label class="custom-control-label" for="cabo">Cabo</label>
+                            <b>(4)</b>
+                    </div>
+                    <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                            <input type="checkbox" class="custom-control-input" id="car">
+                            <label class="custom-control-label" for="car">Carenagem</label>
+                            <b>(4)</b>
+                    </div>
+
+            </div>
+
+            <div class="row">
+                    <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1 mb-2 mr-4" data-toggle="collapse" href="#subcategoria-estado" >
+                            Estado - UF
+                            <img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15"> 
+                    </a>      
+            </div>
+            <div class="collapse" id="subcategoria-estado">
+                        <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                          <input type="checkbox" class="custom-control-input" id="sp">
+                          <label class="custom-control-label" for="sp">SP</label>
+                          <b>(100)</b>
+                        </div>
+            </div>
+
+            <div class="row">
+                    <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1 mb-2 mr-4" data-toggle="collapse" href="#subcategoria-produto" >
+                            Produto
+                            <img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15"> 
+                    </a>      
+            </div>
+            <div class="collapse" id="subcategoria-produto">
+                    <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                            <input type="checkbox" class="custom-control-input" id="cap">
+                            <label class="custom-control-label" for="cap">Capacete</label>
+                            <b>(80)</b>
+                    </div>
+                    <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                            <input type="checkbox" class="custom-control-input" id="pneu">
+                            <label class="custom-control-label" for="pneu">Pneu</label>
+                            <b>(2)</b>
+                    </div>
+                    <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                            <input type="checkbox" class="custom-control-input" id="luva">
+                            <label class="custom-control-label" for="luva">Luva</label>
+                            <b>(10)</b>
+                    </div>
+                    <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                            <input type="checkbox" class="custom-control-input" id="retro">
+                            <label class="custom-control-label" for="retro">Retrovisor</label>
+                            <b>(1)</b>
+                    </div>
+            </div>
+
+            <div class="row">
+                    <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1 mb-2 mr-4" data-toggle="collapse" href="#subcategoria-marca" >
+                            Marca
+                            <img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15"> 
+                    </a>      
+            </div>
+            <div class="collapse" id="subcategoria-marca">
+                    <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                            <input type="checkbox" class="custom-control-input" id="honda">
+                            <label class="custom-control-label" for="honda">Honda</label>
+                            <b>(2)</b>
+                    </div>
+                    <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                            <input type="checkbox" class="custom-control-input" id="suz">
+                            <label class="custom-control-label" for="suz">Suzuki</label>
+                            <b>(5)</b>
+                    </div>
+            </div>
+
+            <div class="row">
+                    <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1 mb-2 mr-4" data-toggle="collapse" href="#subcategoria-material" >
+                            Material
+                            <img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15"> 
+                    </a>      
+            </div>
+            <div class="collapse" id="subcategoria-material">
+                    <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                            <input type="checkbox" class="custom-control-input" id="couro">
+                            <label class="custom-control-label" for="couro">Couro</label>
+                            <b>(2)</b>
+                    </div>
+            </div>
+
+            <div class="row">
+                    <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1 mb-2 mr-4" data-toggle="collapse" href="#subcategoria-cor" >
+                        Cor
+                        <img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15"> 
+                    </a>   
+            </div>
+            <div class="collapse" id="subcategoria-cor">
+                    <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                            <input type="checkbox" class="custom-control-input" id="az">
+                            <label class="custom-control-label" for="az">Azul</label>
+                            <b>(10)</b>
+                    </div>
+                    <div class="custom-control custom-checkbox mr-sm-2 pb-2">
+                            <input type="checkbox" class="custom-control-input" id="ver">
+                            <label class="custom-control-label" for="ver">Vermelho</label>
+                            <b>(4)</b>
+                    </div>
+            </div>
+
+            <div class="row">
+                    <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1 mb-2 mr-4" data-toggle="collapse" href="#subcategoria-preco" >
+                        Preço
+                        <img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15"> 
+                    </a>   
+            </div>
+            <div class="collapse slidecontainer mr-3" id="subcategoria-preco">
+                <b><div class="row pl-3">R$<div id="preco">1</div>,00</div></b>
+                <input type="range" id="rangePreco" value="1" max="100" class="slider mt-3">
+            </div>
+
+        </div>        
+
+
+    </div>
+    <script>
+            $('#radioBtn a').on('click', function(){
+            var sel = $(this).data('title');
+            var tog = $(this).data('toggle');
+            $('#'+tog).prop('value', sel);
+            
+            $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('active').addClass('notActive');
+            $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
+            });
+            
+            $('#txPesquisa').keypress(function(event) {
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if(keycode == '13'){
+                    searchProd();
+                }
+            });
+            //função da para que seleciona o preço
+            var slider = document.getElementById("rangePreco");
+            var output = document.getElementById("preco");
+            output.innerHTML = slider.value; // Display the default slider value
+            
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+            
+            function fechaFiltro(e){
+                var $target = $(e.target);
+                if (!$target.is('#filtro-categorias') &&
+                    !$target.parents('#filtro-categorias').length) {
+            
+                    $(".collapse").collapse('hide');
+                }
+            }
+            
+            </script>
