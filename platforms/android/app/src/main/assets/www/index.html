@@ -22,24 +22,9 @@ function onDeviceReady(){
     //loadCategories();
 }
     
-function onBackKeyDown() { if(device.platform=="iOS"){
-        //history.go(-1);
-    } else if(device.platform=="Android") {
-        //navigator.app.backHistory();
-    }
+function onBackKeyDown() {
+    backMenu();
 }
-
-//$(function() {
-    //Enable swiping...
-    //$("body").swipe( {
-        //Generic swipe handler for all directions
-        //swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-            //alert("You swiped " + direction );
-        //},
-        //Default is 75px, set to 0 for demo so any distance triggers swipe
-        //threshold:0
-    //});
-//});
 
 </script>
 <style type="text/css">

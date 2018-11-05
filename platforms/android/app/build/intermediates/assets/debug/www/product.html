@@ -12,6 +12,7 @@
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/popper.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript" src="js/mask.js"></script>
 <script type="text/javascript">
 var idPrd = 0;
@@ -19,15 +20,12 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady(){
     document.addEventListener("backbutton", onBackKeyDown, false);
     iniciaApp();
-    startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
+    //startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
     getUrlVars();
 }
     
-function onBackKeyDown() { if(device.platform=="iOS"){
-        history.go(-1);
-    } else if(device.platform=="Android") {
-        navigator.app.backHistory();
-    }
+function onBackKeyDown() {
+    backMenu();
 }
 
 function getUrlVars(){

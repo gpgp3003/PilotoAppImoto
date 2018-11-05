@@ -56,13 +56,13 @@ body{
 	background-color:rgba(0, 0, 0, 0.8);
 }
 
-#CategoriesMenu{
+#MarketPlaceMenu{
 	position: fixed;
 	z-index: 9999998;
-	/*display: none;*/
+	/*display: none;
+	left: 0px;*/
 	bottom: 0px;
-	top: 69px;
-	/*left: 0px;*/
+	top: 0px;
 	right: 100%;
 	width: 100%;
 	height: auto;
