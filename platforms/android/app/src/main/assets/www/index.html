@@ -57,8 +57,6 @@ body {
     padding-top: 63px !important;
     padding-bottom: 0px !important;
 }
-
-
 </style>
 </head>
 <body class="panel panel-transparent bg-light">
@@ -160,123 +158,24 @@ body {
     <div class="credits">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-xs-12">
+                <div class="col-md-12">
                     <div class="content">
                         <strong>IMOTOPEÇAS</strong> TODOS OS DIREITOS RESERVADOS
                     </div>
-                    <div class="prime">
-
-                        <br>DESENVOLVIMENTO:&nbsp;<img src="./img/prime.png" alt="">
-
-                        <hr style="background-color: white">
-
-                        <!--FORMAS DE PAGAMENTO-->
-                        <div class="col-md-12">
-                                <strong>FORMAS DE PAGAMENTO</strong><br><br>
-                                
-                                Cartão de crédito<br><br>
-                                <img src="img/forma-pagamento/visa.png" alt="">
-                                <img src="img/forma-pagamento/mastercard.png" alt="">
-                                <img src="img/forma-pagamento/elo.png" alt="">
-                                <img src="img/forma-pagamento/dinners.png" alt="">
-                                <img src="img/forma-pagamento/american_express.png" alt="">
-                                <img src="img/forma-pagamento/hipercard.png" alt="">    
-                                <br><br>
-                                
-                                Débito em conta<br><br>
-                                <img src="img/forma-pagamento/itau.png">
-                                <img src="img/forma-pagamento/boleto.png">
-                                <br>
-                        </div>
-                        <br><br><br>
-                        <!--REDES SOCIAIS-->
-                        
-                        <div class="row">
-                            
-                            <div class="col">
-                                <a onclick="cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace','_system','location=yes')">
-                                    <img id="icones_contato" src="./img/redes-sociais/facebookW.png" width="25" height="45">
-                                </a>  
-                            </div>
-                            
-                            <div class="col">
-                                <a onclick="cordova.InAppBrowser.open('https://www.instagram.com/imotopecas/','_system','location=yes')">
-                                    <img id="icones_contato" src="./img/redes-sociais/instagramW.png"  width="25" height="45">
-                                </a>  
-                            </div>
-                            <div class="col">
-                                <a onclick="cordova.InAppBrowser.open('https://www.twitter.com/imotopecas_/','_system','location=yes')">
-                                    <img id="icones_contato" src="./img/redes-sociais/twitterW.png"  width="25" height="45">
-                                </a>  
-                            </div>
-                            <div class="col">
-                                <a onclick="cordova.InAppBrowser.open('https://www.youtube.com/channel/UCa10bkhJsv-qb6PFDEVUqhA','_system','location=yes')">
-                                    <img id="icones_contato" src="./img/redes-sociais/youtubeW.png"  width="25" height="45">
-                                </a>  
-                            </div>
-                            <div class="col">
-                                <a onclick="cordova.InAppBrowser.open('https://plus.google.com/+ImotopecasMarketplace','_system','location=yes')">
-                                    <img id="icones_contato" src="./img/redes-sociais/googleplusW.png"  width="25" height="45">
-                                </a>  
-                                
-                            </div> 
-                              
-                            <!--
-                            <ul class="list-display">
-                                  <li><a onclick="cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace')">facebook</a></li>
-                                  <li><a onclick="cordova.InAppBrowser.open('https://www.instagram.com/imotopecas/','_system','location=yes')">instagram</a></li>
-                                  <li><a onclick="cordova.InAppBrowser.open('https://www.twitter.com/imotopecas_/','_system','location=yes')"  class="twitter">twitter</a></li>
-                                  <li><a onclick="cordova.InAppBrowser.open('https://www.youtube.com/channel/UCa10bkhJsv-qb6PFDEVUqhA','_system','location=yes')">youtube</a></li>
-                                  <li><a onclick="cordova.InAppBrowser.open('https://plus.google.com/+ImotopecasMarketplace','_system','location=yes')">googleplus</a></li>
-                                </ul>  -->                      
-                        </div>
+                    <div class="prime"><br>DESENVOLVIMENTO:&nbsp;<img src="./img/prime.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <button onclick="enviar()">Enviar Email</button>
-
 </footer>
 </body>
 <script>
-<<<<<<< HEAD
 //$('#txPesquisa').keypress(function(event) {
 //    var keycode = (event.keyCode ? event.keyCode : event.which);
 //    if(keycode == '13'){
 //        searchProd();
 //    }
 //});
-=======
-$('#txPesquisa').keypress(function(event) {
-    var keycode = (event.keyCode ? event.keyCode : event.which);
-    if(keycode == '13'){
-        searchProd();
-    }
-});
-
- document.addEventListener('deviceready', function () {
-    // cordova.plugins.email is now available
-}, false);
-
-cordova.plugins.email.isAvailable(
-    function (isAvailable) {
-        // alert('Service is not available') unless isAvailable;
-    }
-);
-    function enviar(){
-
-    cordova.plugins.email.open({
-        to:      'yagolp@primeinformatica.com.br',
-        cc:      [],
-        bcc:     [],
-        subject: 'Greetings',
-        body:    'How are you? Nice greetings from Leipzig'
-    });
-}
-
-
->>>>>>> 751e285920ccab12844c183fba9231ee503b48e6
 </script>
 </html>

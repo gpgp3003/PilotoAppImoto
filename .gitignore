@@ -1,5 +1,8 @@
-/hooks
-/node_modules
-/platforms
-/plugins
-/res
+\hooks
+\node_modules
+\platforms
+\plugins
+\res
+package-lock.json
+package.json
+config.xml

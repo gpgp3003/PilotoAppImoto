@@ -26,7 +26,7 @@
   "cordova-plugin-device": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-device@^2.0.2"
+      "id": "cordova-plugin-device"
     },
     "is_top_level": true,
     "variables": {}
@@ -82,7 +82,7 @@
   "cordova-plugin-inappbrowser": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-inappbrowser@^3.0.0"
+      "id": "cordova-plugin-inappbrowser@3.0.0"
     },
     "is_top_level": true,
     "variables": {}
@@ -150,23 +150,5 @@
     },
     "is_top_level": true,
     "variables": {}
-<<<<<<< HEAD
-=======
-  },
-<<<<<<< HEAD
-  "cordova-plugin-email": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-email"
-=======
-  "cordova-plugin-file-opener2": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-file-opener2"
->>>>>>> e18887906075dc89dde5564b3672df6f1178165c
-    },
-    "is_top_level": true,
-    "variables": {}
->>>>>>> 751e285920ccab12844c183fba9231ee503b48e6
   }
 }

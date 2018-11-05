@@ -12,14 +12,12 @@
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/popper.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript" src="js/mask.js"></script>
 <script type="text/javascript">
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady(){
     document.addEventListener("backbutton", onBackKeyDown, false);
     iniciaApp();
-    //loadCategories();
 }
     
 function onBackKeyDown() { if(device.platform=="iOS"){
@@ -28,18 +26,6 @@ function onBackKeyDown() { if(device.platform=="iOS"){
         //navigator.app.backHistory();
     }
 }
-
-//$(function() {
-    //Enable swiping...
-    //$("body").swipe( {
-        //Generic swipe handler for all directions
-        //swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-            //alert("You swiped " + direction );
-        //},
-        //Default is 75px, set to 0 for demo so any distance triggers swipe
-        //threshold:0
-    //});
-//});
 
 </script>
 <style type="text/css">
@@ -54,21 +40,32 @@ html {
 }
 
 body {
-    /*padding-top: 130px !important;*/
+    padding-top: 130px !important;
     padding-bottom: 0px !important;
 }
 </style>
 </head>
 <body class="panel panel-transparent bg-light">
-<!--<div class="input-group mb-3 search-box">
+<nav class="navbar navbar-light fixed-top navbar-default bg-white" >
+    <div class="navbar-brand">
+        <button type="button" class="btn btn-light d-inline-block align-center button-menu" alt="" onclick="showhidemenu();"><img src="./glyphicons/glyphicons-517-menu-hamburger.png" width="25" height="18"></button>
+        <img src="./img/Logo.png" width="123" height="30" class="d-inline-block align-center" alt="">
+    </div>
+</nav>
+<div class="bg-light" id="CategoriesMenu">
+    <div class="list-group list-group-flush bg-light" id="menuInicio">
+        <h5 class="text-dark m-3 h4">Todos os departamentos<hr></h5>
+    </div>
+</div>
+<div class="input-group mb-3 search-box">
     <input type="text" id="txPesquisa" class="form-control" placeholder="Pesquise..." aria-label="Filtrar" aria-describedby="txPesquisa">
     <div class="input-group-append">
         <span class="input-group-text glyphicon glyphicon-search" aria-hidden="true">
             <img src="./glyphicons/glyphicons-28-search.png" width="20" height="20" alt="" onclick="searchProd();">
         </span>
     </div>
-</div>-->
-<div class="container-fluid">
+</div>
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -154,95 +151,29 @@ body {
     </a>-->
 </div>
 <br>
-
-
-
-<br>
-
-</div>
+<h5 class="m-3 h4"><hr></h5>
 <footer>
+    <div class="container footer-links">
+        <div class="row">
+            <div class="col-md-12 imotopecas-info mobile-only">
+                <p>IMOTOPEÇAS</p>
+                <p>CNPJ: 28.967.299/0001-77<br>ALAMEDA TOCANTINS, 75<br />2º ANDAR – SALA 210<br />ALPHAVILLE, BARUERI, SP, CEP 06455-020</p>
+            </div>
+        </div>
+    </div>
     <div class="credits">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-xs-12">
+                <div class="col-md-12">
                     <div class="content">
                         <strong>IMOTOPEÇAS</strong> TODOS OS DIREITOS RESERVADOS
                     </div>
-                    <div class="prime">
-
-                        <br>DESENVOLVIMENTO:&nbsp;<img src="./img/prime.png" alt="">
-
-                        <hr style="background-color: white">
-
-                        <!--FORMAS DE PAGAMENTO-->
-                        <div class="col-md-12">
-                                <strong>FORMAS DE PAGAMENTO</strong><br><br>
-                                
-                                Cartão de crédito<br><br>
-                                <img src="img/forma-pagamento/visa.png" alt="">
-                                <img src="img/forma-pagamento/mastercard.png" alt="">
-                                <img src="img/forma-pagamento/elo.png" alt="">
-                                <img src="img/forma-pagamento/dinners.png" alt="">
-                                <img src="img/forma-pagamento/american_express.png" alt="">
-                                <img src="img/forma-pagamento/hipercard.png" alt="">    
-                                <br><br>
-                                
-                                Débito em conta<br><br>
-                                <img src="img/forma-pagamento/itau.png">
-                                <img src="img/forma-pagamento/boleto.png">
-                                <br>
-                        </div>
-                        <br><br><br>
-                        <!--REDES SOCIAIS-->
-                        
-                        <div class="row">
-                            
-                            <div class="col">
-                                <a onclick="cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace','_system','location=yes')">
-                                    <img id="icones_contato" src="./img/redes-sociais/facebookW.png" width="25" height="45">
-                                </a>  
-                            </div>
-                            
-                            <div class="col">
-                                <a onclick="cordova.InAppBrowser.open('https://www.instagram.com/imotopecas/','_system','location=yes')">
-                                    <img id="icones_contato" src="./img/redes-sociais/instagramW.png"  width="25" height="45">
-                                </a>  
-                            </div>
-                            <div class="col">
-                                <a onclick="cordova.InAppBrowser.open('https://www.twitter.com/imotopecas_/','_system','location=yes')">
-                                    <img id="icones_contato" src="./img/redes-sociais/twitterW.png"  width="25" height="45">
-                                </a>  
-                            </div>
-                            <div class="col">
-                                <a onclick="cordova.InAppBrowser.open('https://www.youtube.com/channel/UCa10bkhJsv-qb6PFDEVUqhA','_system','location=yes')">
-                                    <img id="icones_contato" src="./img/redes-sociais/youtubeW.png"  width="25" height="45">
-                                </a>  
-                            </div>
-                            <div class="col">
-                                <a onclick="cordova.InAppBrowser.open('https://plus.google.com/+ImotopecasMarketplace','_system','location=yes')">
-                                    <img id="icones_contato" src="./img/redes-sociais/googleplusW.png"  width="25" height="45">
-                                </a>  
-                                
-                            </div> 
-                              
-                            <!--
-                            <ul class="list-display">
-                                  <li><a onclick="cordova.InAppBrowser.open('facebook:/ImotopecasMarketplace')">facebook</a></li>
-                                  <li><a onclick="cordova.InAppBrowser.open('https://www.instagram.com/imotopecas/','_system','location=yes')">instagram</a></li>
-                                  <li><a onclick="cordova.InAppBrowser.open('https://www.twitter.com/imotopecas_/','_system','location=yes')"  class="twitter">twitter</a></li>
-                                  <li><a onclick="cordova.InAppBrowser.open('https://www.youtube.com/channel/UCa10bkhJsv-qb6PFDEVUqhA','_system','location=yes')">youtube</a></li>
-                                  <li><a onclick="cordova.InAppBrowser.open('https://plus.google.com/+ImotopecasMarketplace','_system','location=yes')">googleplus</a></li>
-                                </ul>  -->                      
-                        </div>
+                    <div class="prime"><br>DESENVOLVIMENTO:&nbsp;<img src="./img/prime.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <a href="index.html"><img src="./glyphicons/glyphicons-217-circle-arrow-left.png" id="backimg"  width="30px" height="30px"></a>
-
-
 </footer>
 </body>
 <script>
@@ -252,27 +183,5 @@ $('#txPesquisa').keypress(function(event) {
         searchProd();
     }
 });
-
- document.addEventListener('deviceready', function () {
-    // cordova.plugins.email is now available
-}, false);
-
-cordova.email.isAvailable(
-    function (isAvailable) {
-        // alert('Service is not available') unless isAvailable;
-    }
-);
-    function enviar(){
-
-    cordova.email.open({
-        to:      'gianpgp@primeinformatica.com.br',
-        cc:      [],
-        bcc:     [],
-        subject: 'Greetings',
-        body:    'How are you? Nice greetings from Leipzig'
-    });
-}
-
-
 </script>
 </html>

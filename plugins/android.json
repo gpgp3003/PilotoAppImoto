@@ -63,9 +63,6 @@
     },
     "cordova-sqlite-storage": {
       "PACKAGE_NAME": "br.com.imotopecas.store"
-    },
-    "cordova-plugin-email": {
-      "PACKAGE_NAME": "br.com.imotopecas.store"
     }
   },
   "dependent_plugins": {}

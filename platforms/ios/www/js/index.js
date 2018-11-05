@@ -74,16 +74,10 @@ function showAppIcon(){
 }
 
 function showhidemenu(){
-    //if($("#CategoriesMenu").css('display') == 'none') {
-    //    $("#CategoriesMenu").show(350);
-    //} else {
-    //    $("#CategoriesMenu").hide(350);
-    //}
-    //alert($("#CategoriesMenu").css('right') + '/' + $(window).width());
-    if($("#CategoriesMenu").css('right') == ($(window).width() + 'px')) {
-        $("#CategoriesMenu").animate({ right: '0' }, 'slow');
+    if($("#CategoriesMenu").css('display') == 'none') {
+        $("#CategoriesMenu").show(350);
     } else {
-        $("#CategoriesMenu").animate({ right: '100%' }, 'slow');
+        $("#CategoriesMenu").hide(350);
     }
 }
 
@@ -144,7 +138,7 @@ function startMenu(objCateg){
         var categ = JSON.parse(dados);
         //alert(categ.IdCat);
         if(categ.IdCatPai==2){
-            var tblRow = '<a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h5 border-0" onclick="showhidemenuitem(' + categ.IdCat + ')">' + categ.Categoria + '</a><div class="list-group bg-secondary" id="item' + categ.IdCat + '" style="display: none;"></div>';
+            var tblRow = '<a class="list-group-item list-group-item-action flex-column align-items-start bg-dark p4 text-muted h5 border-0" onclick="showhidemenuitem(' + categ.IdCat + ')">' + categ.Categoria + '</a><div class="list-group bg-secondary" id="item' + categ.IdCat + '" style="display: none;"></div>';
             $(tblRow).appendTo("#menuInicio");
         }
     });

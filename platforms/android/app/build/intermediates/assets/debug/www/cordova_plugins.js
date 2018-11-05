@@ -347,14 +347,6 @@ module.exports = [
     "runs": true
   },
   {
-    "id": "cordova-plugin-file-opener2.FileOpener2",
-    "file": "plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js",
-    "pluginId": "cordova-plugin-file-opener2",
-    "clobbers": [
-      "cordova.plugins.fileOpener2"
-    ]
-  },
-  {
     "id": "cordova-plugin-file-transfer.FileTransferError",
     "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
     "pluginId": "cordova-plugin-file-transfer",
@@ -525,15 +517,6 @@ module.exports = [
     "clobbers": [
       "SQLitePlugin"
     ]
-  },
-  {
-    "id": "cordova-plugin-email.EmailComposer",
-    "file": "plugins/cordova-plugin-email/www/email_composer.js",
-    "pluginId": "cordova-plugin-email",
-    "clobbers": [
-      "cordova.plugins.email",
-      "plugin.email"
-    ]
   }
 ];
 module.exports.metadata = 
@@ -547,7 +530,6 @@ module.exports.metadata =
   "cordova-plugin-device-orientation": "2.0.1",
   "cordova-plugin-dialogs": "2.0.1",
   "cordova-plugin-file": "6.0.1",
-  "cordova-plugin-file-opener2": "2.0.19",
   "cordova-plugin-file-transfer": "1.7.1",
   "cordova-plugin-geolocation": "4.0.1",
   "cordova-plugin-globalization": "1.11.0",
@@ -558,8 +540,7 @@ module.exports.metadata =
   "cordova-plugin-splashscreen": "5.0.2",
   "cordova-plugin-vibration": "3.1.0",
   "cordova-plugin-whitelist": "1.3.3",
-  "cordova-sqlite-storage": "2.4.0",
-  "cordova-plugin-email": "1.2.7"
+  "cordova-sqlite-storage": "2.4.0"
 };
 // BOTTOM OF METADATA
 });

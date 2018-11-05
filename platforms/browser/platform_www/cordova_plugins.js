@@ -595,33 +595,6 @@ module.exports = [
         "clobbers": [
             "SQLitePlugin"
         ]
-<<<<<<< HEAD
-=======
-    },
-    {
-<<<<<<< HEAD
-        "file": "plugins/cordova-plugin-email/www/email_composer.js",
-        "id": "cordova-plugin-email.EmailComposer",
-        "pluginId": "cordova-plugin-email",
-        "clobbers": [
-            "cordova.plugins.email",
-            "plugin.email"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-email/src/browser/EmailComposerProxy.js",
-        "id": "cordova-plugin-email.EmailComposerProxy",
-        "pluginId": "cordova-plugin-email",
-        "runs": true
-=======
-        "file": "plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js",
-        "id": "cordova-plugin-file-opener2.FileOpener2",
-        "pluginId": "cordova-plugin-file-opener2",
-        "clobbers": [
-            "cordova.plugins.fileOpener2"
-        ]
->>>>>>> e18887906075dc89dde5564b3672df6f1178165c
->>>>>>> 751e285920ccab12844c183fba9231ee503b48e6
     }
 ];
 module.exports.metadata = 
@@ -645,16 +618,7 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-vibration": "3.1.0",
     "cordova-plugin-whitelist": "1.3.3",
-<<<<<<< HEAD
     "cordova-sqlite-storage": "2.4.0"
-=======
-    "cordova-sqlite-storage": "2.4.0",
-<<<<<<< HEAD
-    "cordova-plugin-email": "1.2.7"
-=======
-    "cordova-plugin-file-opener2": "2.0.19"
->>>>>>> e18887906075dc89dde5564b3672df6f1178165c
->>>>>>> 751e285920ccab12844c183fba9231ee503b48e6
 }
 // BOTTOM OF METADATA
 });

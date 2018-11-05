@@ -25,6 +25,5 @@ public final class R {
   public static final class xml {
     public static final int camera_provider_paths=0x7f040000;
     public static final int config=0x7f040001;
-    public static final int opener_paths=0x7f040002;
   }
 }
