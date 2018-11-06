@@ -1,26 +1,29 @@
 <div class="bg-light container-fluid p-0" id="MarketPlaceMenu">
-    <div class="list-group list-group-flush bg-light" id="menuInicio">
-        <br>
-        <div class="row pb-3">
-            <div class="col-xs-2 ">
-                <img class="float-right  ml-5" id="menuUserIcon" src="./img/user_menu.png" alt="user"   width="70" height="70" >
+    <div class="list-group list-group-flush bg-light " id="menuInicio">
+        <div class="row pb-3 pt-3 mktplc-red">
+            <div class="col-xs-2 ml-5">
+                <img class="float-right" id="menuUserIcon" src="./img/user_menuW.png" alt="user"   width="70" height="70" >
             </div>
-            <div class="col float-left">
+            <div class="col float-left text-white">
                 <h4 id="txNome">Gian</h4>
                 <h6 id="txEmail">gian@gmail.com</h6>
             </div>
         </div>
-        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1">
-            <img src="glyphicons/glyphicons-28-search.png" width="20" height="20">&nbsp;Busca por Categorias<img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15">
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1">
+            <img src="glyphicons/glyphicons-28-search.png" width="20" height="20">&nbsp;Busca por Categorias
+            <!-- <img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15"> -->
         </a>
-        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1" href="sobre.html" >
-            <img src="glyphicons/glyphicons-196-info-sign.png" width="20" height="20">&nbsp;Sobre<img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15">
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="sobre.html" >
+            <img src="glyphicons/glyphicons-196-info-sign.png" width="20" height="20">&nbsp;Sobre
+            <!-- <img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15"> -->
         </a>
-        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1" href="contato.html">
-            <img src="glyphicons/glyphicons-11-envelope.png" width="20" height="17">&nbsp;Fale Conosco<img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15">
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="contato.html">
+            <img src="glyphicons/glyphicons-11-envelope.png" width="20" height="17">&nbsp;Fale Conosco
+            <!-- <img class="float-right" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15"> -->
         </a>
-        <a  id="forma_pagamento" class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 text-dark h6 border-1 " onclick="showhidemenuitem(1)">
-            <img src="glyphicons/glyphicons-38-coins.png" width="20" height="20">&nbsp;Formas de Pagamento<img class="float-right" id="seta_img" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15">
+        <a  id="forma_pagamento" class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1 " onclick="showhidemenuitem(1)">
+            <img src="glyphicons/glyphicons-38-coins.png" width="20" height="20">&nbsp;Formas de Pagamento
+            <!-- <img class="float-right" id="seta_img" src="glyphicons/glyphicons-224-chevron-right.png" width="10" height="15"> -->
         </a>
         <div class="list-group bg-secondary" id="item1" style="display: none;">
             <a class="list-group-item list-group-item-action flex-column align-items-start  p4 text-dark  border-0" href="#">Cartão de crédito<br><br>
@@ -79,7 +82,7 @@
     width: 100%;
 }
     
-#forma_pagamento:hover > #seta_img{
+/* #forma_pagamento:hover > #seta_img{
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
@@ -87,18 +90,27 @@
     transform: rotate(90deg);
     height: 10;
     width: 15;
-}
+} */
 </style>
 <script>
 $(function() {
     //Enable swiping...
     $("body").swipe( {
         //Generic swipe handler for all directions
-        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-            //alert("You swiped " + direction );  
-            if(direction=="left"){
-                backMenuSimple();
-            }
+        // swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+        //     //alert("You swiped " + direction );  
+        //     if(direction=="left"){
+        //         backMenuSimple();
+        //     }
+        //     if(direction=="right"){
+        //         showMenuSimple();
+        //     }
+        // },
+        swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData){
+            backMenuSimple();
+        },
+        swipeRight:function(event, direction, distance, duration, fingerCount, fingerData){
+            showMenuSimple();
         },
         //Default is 75px, set to 0 for demo so any distance triggers swipe
         threshold: 75

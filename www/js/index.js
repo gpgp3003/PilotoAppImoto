@@ -112,6 +112,12 @@ function backMenuSimple(){
     }
 }
 
+function showMenuSimple(){
+    if($("#MarketPlaceMenu").css('right') == ($(window).width() + 'px')) {
+        showMenu();
+    }
+}
+
 function showhidemenuitem(idCateg){
     if($("#item" + idCateg).css('display') == 'none') {
         $("#item" + idCateg).show(350);
