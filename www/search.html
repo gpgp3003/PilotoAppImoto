@@ -24,7 +24,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady(){
     document.addEventListener("backbutton", onBackKeyDown, false);
     iniciaApp();
-    startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
+    //startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
     getUrlVars();
 }
     
@@ -153,12 +153,4 @@ body {
     </div>
 </div>
 </body>
-<script>
-$('#txPesquisa').keypress(function(event) {
-    var keycode = (event.keyCode ? event.keyCode : event.which);
-    if(keycode == '13'){
-        searchProd();
-    }
-});
-</script>
 </html>

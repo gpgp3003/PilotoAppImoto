@@ -1,4 +1,4 @@
-#Fri Nov 09 15:14:50 BRST 2018
+#Fri Nov 09 17:56:51 BRST 2018
 base.0=/Users/fabioohtsuki/Documents/Development/Git/iMotoPecas/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

@@ -99,7 +99,11 @@ function backOnePage(){
 
 function backMenu(){
     if($("#MarketPlaceMenu").css('right') == ($(window).width() + 'px')) {
-        backOnePage();
+        if($("#SearchPanel").css('left') == ($(window).width() + 'px')) {
+            backOnePage();
+        } else {
+            hideBusca();
+        }
     } else {
         hideMenu();
     }
@@ -116,6 +120,20 @@ function showMenuSimple(){
     if($("#MarketPlaceMenu").css('right') == ($(window).width() + 'px')) {
         showMenu();
     }
+}
+
+function showbusca(){
+    if($("#MarketPlaceMenu").css('right') == ($(window).width() + 'px')) {
+    } else {
+        hideMenu();
+    }
+    if($("#SearchPanel").css('left') == ($(window).width() + 'px')) {
+        $("#SearchPanel").animate({ left: '0' }, 'fast');
+    }
+}
+
+function hideBusca(){
+    $("#SearchPanel").animate({ left: '100%' }, 'fast');
 }
 
 function showhidemenuitem(idCateg){
@@ -136,6 +154,9 @@ function hideAppIcon(){
 }
 
 function iniciaApp(){
+    $.get("busca.html", function(data){
+        $('body').prepend(data);
+    });
     $.get("header.html", function(data){
         $('body').prepend(data);
     });
@@ -283,11 +304,4 @@ function toDateTime(str){
     var strDia = str.split(" ")[0].split("-")[2];
     var strHorario = str.split(" ")[1];
     return  strDia + "/" + strMes + "/" + strAno + " " + strHorario;
-}
-
-function searchProd(){
-    var txSearch = $('#txPesquisa').val().replace(/\s+/g, '_');
-    if(txSearch.length>=3){
-        window.location = './search.html?strSearch=' + txSearch;
-    }
 }

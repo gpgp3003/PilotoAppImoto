@@ -1,0 +1,36 @@
+<div class="bg-white container-fluid p-0" id="SearchPanel">
+    <div class="form-inline bg-white search-box">
+        <button type="button" class="btn btn-light" alt="" onclick="hideBusca();"><img src="./glyphicons/glyphicons-225-chevron-left.png" width="10" height="30" alt=""></button>
+        <div class="form-group mt-3 ml-3">
+            <input type="text" id="txPesquisa" class="form-control" placeholder="Pesquise..." aria-label="Filtrar" aria-describedby="txPesquisa">
+        </div>
+        <button type="button" id="button-clear-search" class="btn btn-light" alt="" onclick=""><img src="./glyphicons/glyphicons-208-remove.png" width="30" height="30" alt=""></button>
+    </div>
+</div>
+<script>
+$('#txPesquisa').keypress(function(event) {
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        searchProd();
+    } else {
+        var txSearch = $('#txPesquisa').val().replace(/\s+/g, '_');
+        if(txSearch.length>0){
+            $('#button-clear-search').show();
+            if(txSearch.length>1){
+                //showSuggest();
+            } else {
+                //clearSuggest();
+            }
+        } else {
+            $('#button-clear-search').hide();
+        }
+    }
+});
+
+function searchProd(){
+    var txSearch = $('#txPesquisa').val().replace(/\s+/g, '_');
+    if(txSearch.length>=3){
+        window.location = './search.html?strSearch=' + txSearch;
+    }
+} 
+</script>

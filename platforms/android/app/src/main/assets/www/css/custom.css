@@ -28,10 +28,14 @@ footer{
 
 .search-box {
 	position: fixed;
-	top: 80px;
+	top: 0px;
 	padding-right: 15px;
 	padding-left: 15px;
-	z-index: 99999;
+	z-index: 99;
+}
+
+.button-clear-search{
+	display: none;
 }
 
 .titulo-pag {
@@ -76,8 +80,31 @@ footer{
 	overflow-x: hidden;
 }
 
+#SearchPanel{
+	position: fixed;
+	z-index: 9999996;
+	bottom: 0px;
+	top: 0px;
+	left: 100%;
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
 .button-menu{
 	vertical-align: middle;
+}
+
+.button-search{
+	position: absolute;
+	vertical-align: middle;
+	right: 30px;
+}
+
+.button-clear-search{
+	display: none;
 }
 
 .item-menu{
