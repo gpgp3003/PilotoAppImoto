@@ -4,6 +4,12 @@ body{
 	padding-bottom: 20px;
 }
 
+footer{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
 .navbar-default{
 	border-bottom: 5px solid #000000 !important;
 }
@@ -59,13 +65,13 @@ body{
 #MarketPlaceMenu{
 	position: fixed;
 	z-index: 9999998;
-	/*display: none;
-	left: 0px;*/
+	background-color: #fb1922;
 	bottom: 0px;
 	top: 0px;
 	right: 100%;
 	width: 100%;
 	height: auto;
+	min-height: 100%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -348,5 +354,48 @@ h5 hr {
 }
 
 .mktplc-red{
-	background-color: #da1e27;
+	background-color: #fb1922;
+	color: #eae6e6;
 }
+
+#cat_menu{
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 100%;
+	margin-left:  0;
+	margin-right:  0;
+ }
+ 
+ #cat_menu a{
+	border: 1px solid black;
+	border-radius: 30px;
+	display: inline-block;
+	margin: auto;
+	width: 80px;
+	height: 80px;
+	text-decoration: none;
+	color: black;
+ }
+ 
+ #cat_menu img{
+	margin-top: 10px;
+	width: 40px;
+	align-items: center;
+	 margin-left: auto;
+	display: block;
+	margin-right: auto;
+	height: 40px;
+ }
+ 
+ #cat_menu p{
+	font-size: 65%;
+ }
+ 
+ #carouselExampleIndicators{
+	height: 300px;
+ }
+ 
+ #carouselExampleIndicators img{
+	height: 300px;
+	width: 100%;
+ }

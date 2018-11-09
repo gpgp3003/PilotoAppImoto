@@ -40,11 +40,12 @@ function getUrlVars(){
     var tipo = unescape(getTipo[1]);
 	var getCtg = parameters[1].split("=");
     idCtg = unescape(getCtg[1]);
-    if(tipo==1){
-        selCateg(JSON.parse(window.localStorage.getItem("imotoCateg")));
-    } else {
-        selSubCateg(JSON.parse(window.localStorage.getItem("imotoCateg")));
-    }
+    // if(tipo==1){
+    //     selCateg(JSON.parse(window.localStorage.getItem("imotoCateg")));
+    // } else {
+    //     selSubCateg(JSON.parse(window.localStorage.getItem("imotoCateg")));
+    // }
+    loadIdProd();
 }
 
 function selSubCateg(objCateg){

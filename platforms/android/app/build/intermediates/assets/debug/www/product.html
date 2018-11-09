@@ -100,12 +100,14 @@ html {
     -o-background-size: 100% auto;
 }
 
-/*body {
-    padding-top: 130px !important;
-} */
+body {
+    width: 100%;
+
+}
+
 </style>
 </head>
-<body class="panel panel-transparent bg-light">
+<body class="panel panel-transparent bg-light" >
 <img src="./glyphicons/glyphicons-217-circle-arrow-left.png" id="backimg" onclick="onBackKeyDown();" width="30px" height="30px">
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -134,6 +136,8 @@ html {
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+
 <div class="container-fluid panel-body" id="mainbody">
     <div class="card mt-3 rounded boxshadow border-0">
         <div class="card-body" id="prodInfo">
@@ -141,12 +145,196 @@ html {
             <p class="card-text"><span id="txPrice"></span></p>-->
         </div>
     </div>
-    <div class="card mt-3 rounded boxshadow border-0">
+
+</div>
+
+<div class="ml-3 mr-3">
+        <!-- Compra e qtde -->
+ <hr>
+     
+         <p>Quantidade:</p>
+        <input type="text" class="form-control" id="amount" name="qty" maxlength="12" value="1" title="Quantidade" >
+ 
+        <button type="button" title="COMPRAR" class="btn btn-lg btn-block mt-3 mktplc-red" onclick="impSendForm(this)">Comprar</button>
+   
+        <button class="btn btn-outline-secondary btn-lg btn-block" title="Adicionar ao carrinho">Adicionar ao carrinho</button>                    
+ 
+ 
+ 
+ <!-- CEP  -->
+ <hr>
+ 
+     <p>Calcule o Frete:</p>
+    <input type="text" class="form-control" id="zip" name="postcode" value="" placeholder="CEP" maxlength="9">
+    <button type="submit" class="btn btn-secondary btn-lg btn-block mt-3">Calcular Frete</button>
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- Vendido por -->
+ <hr>
+ 
+ </div>
+ <div class="row pl-3 pr-3" >
+ 
+         <div class="col">
+ 
+                 <p>Nome da Loja</p>
+                 <p>São Paulo</p>
+                 </div>
+         
+     <div class="col">
+ <p>203 Vendidos</p>
+ <p>182 Opiniões</p>
+ 
+ <div class="row pl-3">
+     <div class="col-xs-1">
+             <img src="glyphicons/glyphicons-50-star.png" width="20" height="20">
+     </div>
+     <div class="col-xs-1">
+             <img src="glyphicons/glyphicons-50-star.png" width="20" height="20">
+     </div>
+  
+     <div class="col-xs-1">
+             <img src="glyphicons/glyphicons-50-star.png" width="20" height="20">
+     </div>
+  
+     <div class="col-xs-1">
+             <img src="glyphicons/glyphicons-507-star-half.png" width="20" height="20">
+     </div>
+  
+     <div class="col-xs-1">
+             <img src="glyphicons/glyphicons-49-star-empty.png" width="20" height="20">
+     </div>
+  
+ 
+  
+ </div>
+ </div>
+ 
+ 
+ 
+ </div>
+
+
+
+<div class="ml-3 mr-3 mt-3">
+<div class="question mt-2">
+        <div class="imp-collapse">
+            <a data-toggle="collapse" href="#prodDesc" role="button" aria-expanded="false" aria-controls="prodDesc" class="collapsed">Descrição</a>
+        </div>
+        <div class="collapse imp-collapse-body" id="prodDesc" data-parent="#card-collapse">
+        </div>
+    </div>
+    
+    <div class="question mt-2">
+        <div class="imp-collapse">
+            <a data-toggle="collapse" href="#collapse-a" role="button" aria-expanded="false" aria-controls="collapse-a" class="collapsed">Avaliações do Produto</a>
+        </div>
+        <div class="collapse imp-collapse-body" id="collapse-a" data-parent="#card-collapse">
+            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </p>
+        </div>
+    </div>
+    <div class="question mt-2">
+        <div class="imp-collapse">
+            <a data-toggle="collapse" href="#collapse-d" role="button" aria-expanded="false" aria-controls="collapse-d" class="collapsed">Dúvidas</a>
+        </div>
+        <div class="collapse imp-collapse-body" id="collapse-d" data-parent="#card-collapse">
+            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+button{
+    border-radius: 30px;
+
+}
+
+input{
+    border-radius: 30px;
+}
+.imp-container {
+    padding-bottom: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* .row {
+    margin: 2px;
+} */
+
+.imp-collapse a {
+    border-radius: 10px 10px 0 0;
+    padding: 10px 20px;
+    background-color: #202020;
+    /* font-weight: bold; */
+    width: 100%;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+
+}
+
+.imp-collapse a.collapsed {
+    background-color: #eaeaea;
+    color: #000;
+    padding: 2%;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.imp-collapse-body {
+    border: 1px solid rgba(0, 0, 0, .125);
+    padding: 3%;
+}
+
+/* .question {
+    margin: 5px;
+} */
+
+.card {
+    /* position: relative; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+
+p {
+    margin-top: 1%;
+    margin-left: 1%;
+    text-align: justify;
+}
+
+</style>
+
+
+
+
+
+
+<!-- Descricao -->
+
+    <!-- <div class="card mt-3 rounded boxshadow border-0">
         <div class="card-header">Descrição</div>
         <div class="card-body" id="prodDesc">
         </div>
     </div>
-</div>
+</div> -->
 </body>
 <script>
 $('#txPesquisa').keypress(function(event) {
