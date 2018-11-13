@@ -82,11 +82,11 @@ function showhidemenu(){
 }
 
 function showMenu(){
-    $("#MarketPlaceMenu").animate({ right: '0' }, 'slow');
+    $("#MarketPlaceMenu").animate({ right: '0' }, 'fast');
 }
 
 function hideMenu(){
-    $("#MarketPlaceMenu").animate({ right: '100%' }, 'slow');
+    $("#MarketPlaceMenu").animate({ right: '100%' }, 'fast');
 }
 
 function backOnePage(){
@@ -134,6 +134,7 @@ function showbusca(){
 
 function hideBusca(){
     $("#SearchPanel").animate({ left: '100%' }, 'fast');
+    clearSearchBox();
 }
 
 function showhidemenuitem(idCateg){
