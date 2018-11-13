@@ -31,7 +31,12 @@ footer{
 	top: 0px;
 	padding-right: 15px;
 	padding-left: 15px;
-	z-index: 99;
+	padding-top: 15px;
+	z-index: 999997;
+}
+
+.search-box-result {
+	padding-top: 80px;
 }
 
 .button-clear-search{
@@ -103,7 +108,7 @@ footer{
 	right: 30px;
 }
 
-.button-clear-search{
+#button-clear-search{
 	display: none;
 }
 

@@ -305,10 +305,3 @@ function toDateTime(str){
     var strHorario = str.split(" ")[1];
     return  strDia + "/" + strMes + "/" + strAno + " " + strHorario;
 }
-
-function searchProd(){
-    var txSearch = $('#txPesquisa').val().replace(/\s+/g, '_');
-    if(txSearch.length>=3){
-        window.location = './search.html?strSearch=' + txSearch;
-    }
-}

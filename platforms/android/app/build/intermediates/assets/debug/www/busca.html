@@ -1,19 +1,60 @@
 <div class="bg-white container-fluid p-0" id="SearchPanel">
-    <div class="form-inline bg-white search-box">
-        <button type="button" class="btn btn-light" alt="" onclick="hideBusca();"><img src="./glyphicons/glyphicons-225-chevron-left.png" width="10" height="30" alt=""></button>
-        <div class="form-group mt-2 ml-2">
-            <input type="text" id="txPesquisa" class="form-control" placeholder="Pesquise..." aria-label="Filtrar" aria-describedby="txPesquisa">
+    <div class="input-group mb-3 search-box">
+        <div class="input-group-preppend bg-transparent">
+            <span class="input-group-text glyphicon bg-transparent" aria-hidden="true">
+                <img src="./glyphicons/glyphicons-225-chevron-left.png" width="15" height="20" alt="" onclick="hideBusca();">
+            </span>
         </div>
-        <button type="button" class="btn btn-light button-clear-search" alt="" onclick=""><img src="./glyphicons/glyphicons-208-remove.png" width="30" height="30" alt=""></button>
+        <input type="text" id="global-search-input" class="form-control" placeholder="Pesquise..." aria-label="Filtrar" aria-describedby="global-search-input" onkeyup="searchKeyPress(event);">
+        <div class="input-group-append bg-transparent" id="button-clear-search">
+            <span class="input-group-text glyphicon glyphicon-search bg-transparent" aria-hidden="true">
+                <img src="./glyphicons/glyphicons-208-remove.png" width="20" height="20" alt="" onclick="">
+            </span>
+        </div>
+    </div>
+    <div class="list-group search-box-result" id="tbBusca">
     </div>
 </div>
+<style>
+</style>
 <script>
-$('#txPesquisa').keypress(function(event) {
+function searchKeyPress(event) {
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){
         searchProd();
     } else {
-        //
+        var txSearch = $('#global-search-input').val().replace(/\s+/g, '+');
+        if(txSearch.length>0){
+            $('#button-clear-search').show();
+            if(txSearch.length>1){
+                showSuggest(txSearch);
+            } else {
+                $('#tbBusca div').html('');
+            }
+        } else {
+            $('#button-clear-search').hide();
+        }
     }
-});
+}
+
+function showSuggest(txSearch){
+    $.get("https://dev.imotopecas.com.br/catalogsearch/ajax/suggest/?q=" + txSearch, function(result){
+        $('#tbBusca div').html('');
+        $(result).appendTo('#tbBusca');
+        //$('#tbBusca').load(result);
+        //var strRes = result;
+        //alert(strRes);
+    });
+}
+
+function clearSearchBox(){
+    $('#global-search-input').val() = '';
+}
+
+function searchProd(){
+    var txSearch = $('#global-search-input').val().replace(/\s+/g, '+');
+    if(txSearch.length>1){
+        window.location = "search.html?strSearch=" + txSearch;
+    }
+}
 </script>
