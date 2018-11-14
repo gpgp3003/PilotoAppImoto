@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<title>iMotopeças</title>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="js/mask.js"></script>
+<script type="text/javascript">
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+    iniciaApp();
+}
+
+function onBackKeyDown() {
+    backMenu();
+}
+
+</script>
+
+</head>
+
+<body class="panel panel-transparent bg-light">
+    <div class="container-fluid">
+        <h5 class="inner-page-title">Meu perfil<hr></h5>
+        <br>
+        <h6 id="titulo_perfil">Informações de Contato</h6>
+        <p>Jonatas Avila</p>
+        <p>jonatas.avila12345@gmail.com</p>
+        <br>
+
+
+        <h6 id="titulo_perfil">Meu Endereço</h6>
+        <p>Rua Professor Artur Ramos, 123</p>
+        <p>  Jardim Paulistano</p>
+         <p>   São Paulo, São Paulo, 01454-011,  Brasil</p>
+           
+
+            <br>
+            <h6 id="titulo_perfil">Telefones</h6>
+            <p>T: (11) 9489-3717 </p>
+            <p> F: (11) 94893-7178</p>
+        </div>
+</body>
+<script>
+    $('#txPesquisa').keypress(function (event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            searchProd();
+        }
+    });
+</script>
+<style>
+#titulo_perfil{
+    background-color: #edeeef;
+    color: #727272;
+    border-radius: 35px;
+    width: 100%;
+    padding: 10px;
+}
+p{
+    margin-left: 15px;
+}
+
+</style>
+</html>
