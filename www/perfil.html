@@ -2,75 +2,136 @@
 <html>
 
 <head>
-<meta charset="utf-8" />
-<meta name="format-detection" content="telephone=no" />
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="css/custom.css" />
-<title>iMotopeças</title>
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="js/popper.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
-<script type="text/javascript" src="js/mask.js"></script>
-<script type="text/javascript">
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    document.addEventListener("backbutton", onBackKeyDown, false);
-    iniciaApp();
-}
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <title>iMotopeças</title>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/mask.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            document.addEventListener("backbutton", onBackKeyDown, false);
+            iniciaApp();
+        }
 
-function onBackKeyDown() {
-    backMenu();
-}
+        function onBackKeyDown() {
+            backMenu();
+        }
 
-</script>
+    </script>
 
 </head>
 
 <body class="panel panel-transparent bg-light">
     <div class="container-fluid">
-        <h5 class="inner-page-title">Meu perfil<hr></h5>
+        <h5 class="inner-page-title">Meu perfil
+            <hr>
+        </h5>
         <br>
-        <h6 id="titulo_perfil">Informações de Contato</h6>
-        <p>Jonatas Avila</p>
-        <p>jonatas.avila12345@gmail.com</p>
+        <h6 id="titulo_perfil">Informações de Contato <img data-toggle="modal" data-target=".bd-example-modal-lg" class="float-right  mt-1 mr-2"
+                src="glyphicons/glyphicons-31-pencilW.png" width="15" height="15"> </h6>
+        <p id="nome">Jonatas Avila</p>
+        <p id="email">jonatas.avila12345@gmail.com</p>
         <br>
 
+        <!-- edit modal -->
 
-        <h6 id="titulo_perfil">Meu Endereço</h6>
-        <p>Rua Professor Artur Ramos, 123</p>
-        <p>  Jardim Paulistano</p>
-         <p>   São Paulo, São Paulo, 01454-011,  Brasil</p>
-           
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <h5 class="mt-3 mb-2 ml-2">Informações de Contato </h5>
+                    <input class="ml-3 mb-2" type="text" placeholder="Nome">
+                    <input class="ml-3 mb-2" type="text" placeholder="Email">
 
-            <br>
-            <h6 id="titulo_perfil">Telefones</h6>
-            <p>T: (11) 9489-3717 </p>
-            <p> F: (11) 94893-7178</p>
+                    <div class="row  justify-content-around pb-3">
+                        <div class="col-4">
+
+                            <button id="btn-perfil " class="btn btn-small btn-success">Salvar</button>
+
+                        </div>
+                        <div class="col-4">
+
+                            <button id="btn-perfil " class="btn btn-small btn-danger">Cancelar</button>
+
+                        </div>
+
+                    </div>
+
+                    </button>
+                </div>
+            </div>
         </div>
-</body>
-<script>
-    $('#txPesquisa').keypress(function (event) {
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if (keycode == '13') {
-            searchProd();
-        }
-    });
-</script>
-<style>
-#titulo_perfil{
-    background-color: #edeeef;
-    color: #727272;
-    border-radius: 35px;
-    width: 100%;
-    padding: 10px;
-}
-p{
-    margin-left: 15px;
-}
 
+        <!--fim edit modal -->
+
+        <h6 id="titulo_perfil">Meu Endereço <img onclick="edit_nome()" class="float-right  mt-1 mr-2" src="glyphicons/glyphicons-31-pencilW.png"
+                width="15" height="15"> </h6>
+
+        <p class="font-weight-bold">Endereço(s) de Cobrança </p>
+
+        <div class="bg-p rounded mb-2">
+            <p>Rua Professor Artur Ramos, 123</p>
+            <p> Jardim Paulistano</p>
+            <p> São Paulo, São Paulo, 01454-011, Brasil</p>
+        </div>
+
+
+
+        <p class="font-weight-bold">Endereço(s) de Entrega </p>
+
+        <div class="bg-p rounded mb-2">
+            <p>Rua Professor Artur Ramos, 123</p>
+            <p> Jardim Paulistano</p>
+            <p> São Paulo, São Paulo, 01454-011, Brasil</p>
+        </div>
+
+        <br>
+        <h6 id="titulo_perfil">Telefones <img onclick="edit_nome()" class="float-right mt-1 mr-2" src="glyphicons/glyphicons-31-pencilW.png"
+                width="15" height="15"></h6>
+        <p>T: (11) 9489-3717 </p>
+        <p> F: (11) 94893-7178</p>
+    </div>
+</body>
+
+<style>
+    #titulo_perfil {
+        background-color: #8e8e8e;
+        color: white;
+        border-radius: 35px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    p {
+        margin-left: 15px;
+    }
+
+    .bg-p {
+        background-color: #d0d0d0;
+    }
+
+    #btn-perfil {
+        width: 100px;
+        margin: 20px;
+        
+
+    }
+
+    
 </style>
+<script>
+
+
+
+</script>
+
 </html>
