@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<title>iMotopeças</title>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="js/mask.js"></script>
+<script type="text/javascript">
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+    iniciaApp();
+}
+
+function onBackKeyDown() {
+    backMenu();
+}
+
+function fechaCollapse() {
+    $('.collapse').collapse('hide');
+}
+
+</script>
+
+<style>
+    html {
+        background-position: fixed;
+        background-repeat: repeat-y;
+        background-size:  100% auto;
+        -webkit-background-size: 100% auto;
+        -moz-background-size: 100% auto;
+        -o-background-size: 100% auto;
+    }
+
+    body {
+        padding-top: 63px !important;
+        padding-bottom: 0px !important;
+        height: auto;
+        bottom: 0px;
+    }
+
+    .categoria-header-div{
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    .categoria-header-div:focus-within{
+        background-color:rgb(189, 185, 185);
+    }
+
+    #menuCategoriaIcon{
+        border-radius: 50%;
+        border: 1px solid white;
+        padding: 1%;
+    }
+
+    div.categoria-header-div a{
+        width: 100%;
+    }
+
+    div.categoria-header-div a h3{
+        font-weight: 300;
+    }
+</style>
+
+</head>
+
+<body class="panel panel-transparent bg-light">
+
+    <!--Vestuário-->
+    <div class="row pb-1 pt-1 pl-3 pr-3 mb-1 mktplc-red categoria-header-div">
+        <a onclick="fechaCollapse()" data-toggle="collapse" href="#collapse-vestuario">
+            <img class="float-left ml-3 mt-1" id="menuCategoriaIcon" src="./img/jac-branco.png" alt="user" width="40" height="40" >
+            <h3 class="float-left text-white pl-3 pt-2 pb-1">Vestuário</h3>
+        </a>
+    </div>
+    <div class="collapse" id="collapse-vestuario">
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Calçado (1)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Capa de Chuva Impermeável (9)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Jaqueta (3)
+        </a>
+    </div>
+
+    <!--Capacetes-->
+    <div class="row pb-1 pt-1 pl-3 pr-3 mb-1 mktplc-red categoria-header-div" id="">
+        <a onclick="fechaCollapse()" data-toggle="collapse" href="#collapse-capacete">
+            <img class="float-left ml-3 mt-1" id="menuCategoriaIcon" src="./img/cap-branco.png" alt="user" width="40" height="40" >
+            <h3 class="float-left text-white pl-3 pt-2 pb-1">Capacetes</h3>
+        </a>
+    </div>
+    <div class="collapse" id="collapse-capacete">
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Aberto (4)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Integral (28)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Motocross (2)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Viseira (9)
+        </a>
+    </div>
+
+    <!--Motopeças-->
+    <div class="row pb-1 pt-1 pl-3 pr-3 mb-1 mktplc-red categoria-header-div" id="">
+        <a onclick="fechaCollapse()" data-toggle="collapse" href="#collapse-motopecas">
+            <img class="float-left ml-3 mt-1" id="menuCategoriaIcon" src="./img/peca-branco.png" alt="user" width="40" height="40" >
+            <h3 class="float-left text-white pl-3 pt-2 pb-1">Motopeças</h3>
+        </a>
+    </div>
+    <div class="collapse" id="collapse-motopecas">
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Calçado (1)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Capa de Chuva Impermeável (9)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Jaqueta (3)
+        </a>
+    </div>    
+    
+    <!--Pneus-->
+    <div class="row pb-1 pt-1 pl-3 pr-3 mb-1 mktplc-red categoria-header-div" id="">
+        <a onclick="fechaCollapse()" data-toggle="collapse" href="#collapse-pneus">
+            <img class="float-left ml-3 mt-1" id="menuCategoriaIcon" src="./img/pneu-branco.png" alt="user" width="40" height="40" >
+            <h3 class="float-left text-white pl-3 pt-2 pb-1">Pneus</h3>
+        </a>
+    </div>
+    <div class="collapse" id="collapse-pneus">
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Calçado (1)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Capa de Chuva Impermeável (9)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Jaqueta (3)
+        </a>
+    </div>
+        
+    <!--Acessórios-->
+    <div class="row pb-1 pt-1 pl-3 pr-3 mb-1 mktplc-red categoria-header-div" id="">
+        <a onclick="fechaCollapse()" data-toggle="collapse" href="#collapse-acessorios">
+            <img class="float-left ml-3 mt-1" id="menuCategoriaIcon" src="./img/acc-branco.png" alt="user" width="40" height="40" >
+            <h3 class="float-left text-white pl-3 pt-2 pb-1">Acessórios</h3>
+        </a>
+    </div>
+    <div class="collapse" id="collapse-acessorios">
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Calçado (1)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Capa de Chuva Impermeável (9)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Jaqueta (3)
+        </a>
+    </div>
+    
+    <!--Off-Road-->
+    <div class="row pb-1 pt-1 pl-3 pr-3 mb-1 mktplc-red categoria-header-div" id="">
+        <a onclick="fechaCollapse()" data-toggle="collapse" href="#collapse-offroad">
+            <img class="float-left ml-3 mt-1" id="menuCategoriaIcon" src="./img/off-branco.png" alt="user" width="40" height="40" >
+            <h3 class="float-left text-white pl-3 pt-2 pb-1">Off-Road</h3>
+        </a>
+    </div>        
+    <div class="collapse" id="collapse-offroad">
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Calçado (1)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Capa de Chuva Impermeável (9)
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start bg-light p4 pt-3 pb-3 text-dark h6 border-1" href="#" >
+            Jaqueta (3)
+        </a>
+    </div>
+
+</body>
+
+</html>
