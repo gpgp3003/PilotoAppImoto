@@ -74,17 +74,67 @@ function showAppIcon(){
 }
 
 function showhidemenu(){
-    //if($("#CategoriesMenu").css('display') == 'none') {
-    //    $("#CategoriesMenu").show(350);
-    //} else {
-    //    $("#CategoriesMenu").hide(350);
-    //}
-    //alert($("#CategoriesMenu").css('right') + '/' + $(window).width());
-    if($("#CategoriesMenu").css('right') == ($(window).width() + 'px')) {
-        $("#CategoriesMenu").animate({ right: '0' }, 'slow');
+    if($("#MarketPlaceMenu").css('right') == ($(window).width() + 'px')) {
+        showMenu();
     } else {
-        $("#CategoriesMenu").animate({ right: '100%' }, 'slow');
+        hideMenu();
     }
+}
+
+function showMenu(){
+    $("#MarketPlaceMenu").animate({ right: '0' }, 'fast');
+}
+
+function hideMenu(){
+    $("#MarketPlaceMenu").animate({ right: '100%' }, 'fast');
+}
+
+function backOnePage(){
+    if(device.platform=="iOS"){
+        history.go(-1);
+    } else if(device.platform=="Android") {
+        navigator.app.backHistory();
+    }
+}
+
+function backMenu(){
+    if($("#MarketPlaceMenu").css('right') == ($(window).width() + 'px')) {
+        if($("#SearchPanel").css('left') == ($(window).width() + 'px')) {
+            backOnePage();
+        } else {
+            hideBusca();
+        }
+    } else {
+        hideMenu();
+    }
+}
+
+function backMenuSimple(){
+    if($("#MarketPlaceMenu").css('right') == ($(window).width() + 'px')) {
+    } else {
+        hideMenu();
+    }
+}
+
+function showMenuSimple(){
+    if($("#MarketPlaceMenu").css('right') == ($(window).width() + 'px')) {
+        showMenu();
+    }
+}
+
+function showbusca(){
+    if($("#MarketPlaceMenu").css('right') == ($(window).width() + 'px')) {
+    } else {
+        hideMenu();
+    }
+    if($("#SearchPanel").css('left') == ($(window).width() + 'px')) {
+        $("#SearchPanel").animate({ left: '0' }, 'fast');
+    }
+}
+
+function hideBusca(){
+    $("#SearchPanel").animate({ left: '100%' }, 'fast');
+    clearSearchBox();
 }
 
 function showhidemenuitem(idCateg){
@@ -105,24 +155,19 @@ function hideAppIcon(){
 }
 
 function iniciaApp(){
-    if(window.localStorage.getItem("imotoCateg")==null){
-        loadCategories();
-    } else {
-        if(window.localStorage.getItem("imotoCateg").length==0){
-            loadCategories();
-        } else {
-            if(window.localStorage.getItem("imotoCategUpd")==null){
-                loadCategories();
-            } else {
-                //
-                startMenu(JSON.parse(window.localStorage.getItem("imotoCateg")));
-            }
-        }
-    }
+    $.get("busca.html", function(data){
+        $('body').prepend(data);
+    });
+    $.get("header.html", function(data){
+        $('body').prepend(data);
+    });
+    $.get("menu.html", function(data){
+        $('body').prepend(data);
+    });
 }
 
 function loadCategories(){
-    showAppMsg('Carregando App');
+    showAppMsg('Carregando Categorias');
     var urlServer = strServer + "/categories.php";
     $.getJSON(urlServer, function(result){
         window.setTimeout(function() {
@@ -260,11 +305,4 @@ function toDateTime(str){
     var strDia = str.split(" ")[0].split("-")[2];
     var strHorario = str.split(" ")[1];
     return  strDia + "/" + strMes + "/" + strAno + " " + strHorario;
-}
-
-function searchProd(){
-    var txSearch = $('#txPesquisa').val().replace(/\s+/g, '_');
-    if(txSearch.length>=3){
-        window.location = './search.html?strSearch=' + txSearch;
-    }
 }
